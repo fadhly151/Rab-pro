@@ -1,0 +1,99 @@
+rules_version = '2';
+
+// ============================================================
+// ATURAN KEAMANAN FIRESTORE — RAB Cerdas
+// ============================================================
+// Cara pakai: Firebase Console > Build > Firestore Database > Rules
+// > tempel isi file ini > Publish.
+//
+// GANTI baris ADMIN_EMAIL di bawah dengan email akun admin/pemilik
+// aplikasi (email yang Anda pakai login di app ini). Hanya akun ini
+// yang boleh membuat kode lisensi baru lewat halaman admin-generator.html.
+//
+// Struktur data yang dipakai fitur login & lisensi:
+//   users/{uid}          -> {name, email, phone, createdAt, isPro, licenseCode,
+//                             proActivatedAt, branding:{name,address,logo},
+//                             materialPrices:{...}, projectData:{...}}
+//     (branding/materialPrices/projectData disimpan lewat fitur "Simpan
+//      Branding", "Simpan Harga", "Simpan Proyek" — khusus versi PRO)
+//   phoneIndex/{phone}   -> {uid, email}
+//     (dipakai supaya user bisa login pakai No HP/WA, karena Firebase
+//      Authentication secara native hanya mengenali email untuk
+//      metode email/password. Nomor HP dipetakan ke email di sini.)
+//   licenseCodes/{kode}  -> {status:'unused'|'used', package, usedBy, usedAt}
+//     (satu dokumen = satu kode lisensi yang bisa dijual ke satu user)
+// ============================================================
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin(){
+      return request.auth != null
+             && request.auth.token.email == 'ragi.kayu19@gmail.com';
+    }
+
+    // Profil pengguna: hanya pemilik akun (uid yang sama) yang boleh
+    // baca/tulis data profilnya sendiri. Field "isPro" hanya boleh
+    // berubah dari false -> true, dan HANYA jika kode lisensi yang
+    // dikirim benar-benar berstatus 'unused' di koleksi licenseCodes.
+    // Sekali true, tidak bisa diubah balik jadi false oleh user sendiri.
+    match /users/{uid} {
+      allow get: if request.auth != null && (request.auth.uid == uid || isAdmin());
+      allow list: if isAdmin();
+      allow create: if request.auth != null
+                    && request.auth.uid == uid
+                    && request.resource.data.email == request.auth.token.email;
+      allow update: if request.auth != null && request.auth.uid == uid
+                    && (
+                      // update biasa: field isPro tidak disentuh/tidak berubah
+                      request.resource.data.get('isPro', false) == resource.data.get('isPro', false)
+                      ||
+                      // aktivasi PRO lewat kode lisensi yang valid & belum dipakai
+                      (
+                        request.resource.data.get('isPro', false) == true
+                        && resource.data.get('isPro', false) == false
+                        && request.resource.data.licenseCode is string
+                        && get(/databases/$(database)/documents/licenseCodes/$(request.resource.data.licenseCode)).data.status == 'unused'
+                      )
+                    );
+      allow delete: if false;
+    }
+
+    // Indeks No HP -> email, dipakai saat proses LOGIN sebelum user
+    // ter-autentikasi (jadi read perlu terbuka untuk lookup), namun
+    // write dibatasi ketat: hanya boleh dibuat oleh pemilik uid yang
+    // sesuai, saat pertama kali daftar, dan tidak bisa diubah/dihapus
+    // pengguna lain setelahnya.
+    match /phoneIndex/{phone} {
+      allow read: if true;
+      allow create: if request.auth != null
+                    && request.resource.data.uid == request.auth.uid
+                    && request.resource.data.email == request.auth.token.email;
+      allow update: if request.auth != null
+                    && resource.data.uid == request.auth.uid;
+      allow delete: if false;
+    }
+
+    // Kode lisensi PRO. Siapa pun yang login boleh CEK satu kode
+    // spesifik (get by ID), tapi tidak boleh melihat daftar semua kode
+    // (list/query ditutup) supaya kode tidak bisa "ditebak massal".
+    // Hanya admin yang boleh membuat kode baru (lewat admin-generator.html).
+    // Update hanya boleh untuk menandai kode jadi 'used' oleh pemakainya
+    // sendiri, dan tidak bisa dikembalikan ke 'unused'.
+    match /licenseCodes/{code} {
+      allow get: if request.auth != null;
+      allow list: if isAdmin();
+      allow create: if isAdmin();
+      allow update: if request.auth != null
+                    && resource.data.status == 'unused'
+                    && request.resource.data.status == 'used'
+                    && request.resource.data.usedBy == request.auth.uid
+                    && request.resource.data.package == resource.data.package;
+      allow delete: if false;
+    }
+
+    // Semua koleksi lain: tertutup secara default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

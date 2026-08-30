@@ -1,0 +1,2999 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#1B2A4A">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/jpeg" sizes="32x32" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAgACADASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAABgcFAgj/xAAtEAACAQMCBQIEBwAAAAAAAAABAgQDBREGIQAHCBIxIkETJDKBFBVCUVJh0f/EABYBAQEBAAAAAAAAAAAAAAAAAAQCBf/EACMRAAEDAwQCAwAAAAAAAAAAAAECBBEDIVEABRJBMTIUQnH/2gAMAwEAAhEDEQA/APPHPznzrTqX5i3K4ypFwlWxa1Q2yxxu96MOMDhcU1GC2MFnIySfOMASqPAlSJVGgKVRnqsqoqqSzFvAAG5JzsBxQunsA6+lZAbFtkMAd9wUIP2IB+3GRLktpvTttkWJKtWfcYj1JVyFIq8ZAxRqNEfpz2t3VPqYbDtGc6atxNJ0tkhFwExiVBRueoCf09DUp24VGqHi12JVOYSUiw7kq/B3orLt8qHMrR3pVEqU6hpNTcFWVgcdrA7hh+x4pvTv1Eaq6eOYNvutruMr8oElEulmaqTHl0e7Dgodg4GSrjcED2yDxEhzq9pult1DEjS7pUttP8BcKHzFdlEikqUXx9XqKqrk9yqSCSuwH66tFv07cI9pi4rT4ykzpSVSyu7HIQL4HaNsjyMcU23Om7X8ZSZUZ8XBAAJVOJIGZi3epc7ZUbU/kJMJEebEEkgJjMAnEA30o6eVZ+YElUUsxtkkAD3Po4zq2nL/ACLZa4tTS1z+RR1DBT6u56hOfQf5nx/XCfnryN1x0u8zLhFqUrjBhLWqC1X6MpFGXHY+nDjIDduAyHcEeMYJCjmnrUEZ1VdcZ3HxR/nAHLB3UeKdteCkqCfYqBBSFD6jCjp7Z+0QzQ1c80qSVeoSQQopP2OU6f6TsOpLHYp+o61C5T7tg22Dbpcj4tddlqNVamQGWmMr6vGQffHEguSVqU50lOzzAxEj4ikMKnce4Nn3zxrpzB1VSky69PUE9akog127lJq4GAG9O4A2x44d9PfT5q7qO5jQbfAgzKlsqS1q3e+VKZFGNSLd1Rmc7GowyFUbknwBkhW3s67OtVcOQgcgPWbQPFwLTJySb4Bdwe0XVGlQblR4k+0Xk+bE3iBgAWyf/9k=">
+<link rel="icon" type="image/jpeg" sizes="192x192" href="data:image/jpeg;base64,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">
+<link rel="apple-touch-icon" href="data:image/jpeg;base64,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">
+
+<!-- ============================================================
+     FIREBASE (Autentikasi + Analytics)
+     Isi kredensial di file "firebase-config.js" (satu folder dengan
+     index.html ini). Selama firebaseConfig di file itu belum diisi,
+     aplikasi tetap berjalan normal — akun disimpan lokal di HP ini
+     saja (lihat PANDUAN_FIREBASE_AUTH.md untuk cara mengisinya).
+     ============================================================ -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics-compat.js"></script>
+<script src="firebase-config.js"></script>
+
+<title>RAB Cerdas PRO — Kalkulator RAB &amp; Sketsa Interior</title>
+<style>
+  :root{
+    --ink:#1A1A1A;
+    --blueprint:#1B2A4A;
+    --blueprint-2:#243b63;
+    --paper:#EDE7D9;
+    --paper-2:#F6F2E8;
+    --rust:#C9622D;
+    --rust-2:#a94f21;
+    --steel:#5C7A99;
+    --line:#c9c0a8;
+    --ok:#3f7d4f;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:
+      repeating-linear-gradient(45deg, rgba(122,79,42,.055) 0 2px, transparent 2px 34px),
+      repeating-linear-gradient(-45deg, rgba(122,79,42,.055) 0 2px, transparent 2px 34px),
+      radial-gradient(ellipse at 15% -10%, rgba(255,255,255,.65), transparent 55%),
+      linear-gradient(160deg, #F8F2E5 0%, #EFE3CB 55%, #EAE0C8 100%);
+    background-attachment:fixed;
+    color:var(--ink);
+    min-height:100vh;
+    padding-bottom:90px;
+  }
+  header{
+    background:var(--blueprint);
+    color:var(--paper-2);
+    padding:22px 18px 18px;
+    position:relative;
+    overflow:hidden;
+    border-bottom:4px solid var(--rust);
+  }
+  header::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 20px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 20px);
+  }
+  header .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--rust);
+    position:relative;
+  }
+  header h1{
+    margin:4px 0 0;
+    font-family:'Archivo',system-ui,sans-serif;
+    font-weight:800;
+    font-size:26px;
+    letter-spacing:-.01em;
+    position:relative;
+  }
+  header .sub{
+    margin:4px 0 0;
+    font-size:12.5px;
+    color:#c9d3e3;
+    position:relative;
+  }
+  .brand-row{
+    display:flex; align-items:center; gap:10px;
+    position:relative;
+  }
+  .brand-logo{
+    width:42px; height:42px;
+    object-fit:cover;
+    border-radius:9px;
+    box-shadow:0 1px 4px rgba(0,0,0,.35);
+    flex-shrink:0;
+    display:block;
+  }
+  .brand-row h1{margin:0;}
+  .brand-row .eyebrow{margin:0 0 2px;}
+  .badge-pro{
+    position:absolute; top:18px; right:16px;
+    background:var(--steel);
+    color:#fff;
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    font-weight:700;
+    letter-spacing:.08em;
+    padding:4px 9px;
+    border-radius:3px;
+  }
+  .locked{
+    position:relative;
+    opacity:.55;
+    pointer-events:none;
+  }
+  .lock-overlay{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(255,255,255,.55);
+    border-radius:8px;
+    pointer-events:auto;
+  }
+  .lock-overlay .msg{
+    background:var(--blueprint); color:#fff;
+    font-size:12px; font-weight:700;
+    padding:8px 14px; border-radius:20px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .watermark{
+    position:fixed;
+    bottom:46px; right:10px;
+    background:rgba(201,98,45,.9);
+    color:#fff;
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    padding:4px 8px;
+    border-radius:4px;
+    z-index:20;
+    pointer-events:none;
+  }
+
+  #printArea{display:none;}
+  @media print{
+    body *{visibility:hidden;}
+    #printArea, #printArea *{visibility:visible;}
+    #printArea{position:absolute; left:0; top:0; width:100%; display:block; padding:20px; font-family:'Inter',sans-serif; color:#111;}
+    #printArea h1{font-family:'Archivo',sans-serif; font-size:20px; margin:0 0 2px;}
+    #printArea .pmeta{font-size:12px; color:#444; margin-bottom:14px;}
+    #printArea table{width:100%; border-collapse:collapse; font-size:11px; margin-bottom:14px;}
+    #printArea th, #printArea td{border:1px solid #999; padding:5px 6px; text-align:left;}
+    #printArea .ptotal{font-weight:800; font-size:14px; text-align:right; margin:8px 0;}
+    #printArea .psign{display:flex; justify-content:space-between; margin-top:60px; font-size:12px;}
+    #printArea .psign div{width:45%; text-align:center; border-top:1px solid #333; padding-top:6px;}
+  }
+  .upgrade-card{
+    background:linear-gradient(135deg, var(--blueprint), var(--blueprint-2)) !important;
+    color:#fff;
+    border-radius:10px;
+    padding:18px;
+  }
+  /* !important below: .card h2 / .card p.desc are declared further down the
+     stylesheet with the same selector specificity, so without !important
+     they silently win the cascade and repaint this card's text the dark
+     --blueprint color on a dark --blueprint background (i.e. invisible). */
+  .upgrade-card h2{color:#fff !important;}
+  .upgrade-card .num{border-color:#fff !important; color:#fff !important;}
+  .upgrade-card ul, .upgrade-card ol{color:#e4e9f2 !important; padding-left:18px; font-size:13px; line-height:1.9;}
+  .upgrade-card label{color:#e4e9f2 !important;}
+  .upgrade-card .price{
+    font-family:'Archivo',sans-serif; font-weight:800; font-size:22px; color:var(--rust) !important;
+    margin:6px 0;
+  }
+  .pkg-card{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:8px;
+    padding:12px 14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+  }
+  .pkg-card.best{ border-color:var(--rust); background:rgba(201,98,45,.22); }
+  .pkg-card .pkg-name{ font-weight:700; font-size:13px; color:#fff !important; }
+  .pkg-card .pkg-badge{ font-size:9.5px; background:var(--rust); color:#fff !important; padding:1px 6px; border-radius:3px; margin-left:6px; vertical-align:middle; }
+  .pkg-card .pkg-price{ font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; color:#FFD166 !important; margin-top:2px; }
+  .pkg-card .pkg-sub{ font-size:10.5px; color:#cfd6e4 !important; }
+  .pkg-card .pkg-btn{
+    background:var(--rust); color:#fff; border:none; border-radius:6px;
+    padding:8px 10px; font-size:11.5px; font-weight:700; white-space:nowrap; cursor:pointer;
+  }
+  nav{
+    display:flex;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:10;
+    overflow-x:auto;
+  }
+  nav button{
+    flex:1;
+    min-width:84px;
+    border:none;
+    background:none;
+    padding:12px 6px;
+    font-family:'Inter',sans-serif;
+    font-size:12px;
+    font-weight:600;
+    color:#8a8370;
+    border-bottom:3px solid transparent;
+    cursor:pointer;
+  }
+  nav button.active{
+    color:var(--blueprint);
+    border-bottom-color:var(--rust);
+  }
+  main{
+    display:flex;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;
+    transition:height .18s ease;
+  }
+  main section{
+    flex:0 0 100%;
+    width:100%;
+    max-width:100%;
+    scroll-snap-align:start;
+    align-self:flex-start;
+    padding:16px;
+    box-sizing:border-box;
+    min-height:200px;
+  }
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:16px;
+    margin-bottom:14px;
+    box-shadow:0 1px 2px rgba(27,42,74,.06);
+  }
+  .card h2{
+    font-family:'Archivo',sans-serif;
+    font-size:15px;
+    margin:0 0 4px;
+    color:var(--blueprint);
+    display:flex; align-items:center; gap:8px;
+  }
+  .card h2 .num{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--rust);
+    border:1px solid var(--rust);
+    border-radius:3px;
+    padding:1px 6px;
+  }
+  .card p.desc{font-size:12px;color:#726c5c;margin:0 0 12px;}
+  table{width:100%; border-collapse:collapse; font-size:12.5px;}
+  th{
+    text-align:left;
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--steel);
+    padding:6px 4px;
+    border-bottom:2px solid var(--blueprint);
+  }
+  td{padding:6px 4px; border-bottom:1px solid #eee; vertical-align:middle;}
+  td input, td select{
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:6px 5px;
+    font-size:12.5px;
+    font-family:inherit;
+  }
+  .rm-btn{
+    background:none; border:none; color:#b33; cursor:pointer; font-size:16px; padding:0 4px;
+  }
+  .row-actions{display:flex; gap:8px; margin-top:10px;}
+  .btn{
+    border:none; border-radius:6px; padding:10px 14px;
+    font-family:'Inter',sans-serif; font-weight:700; font-size:13px;
+    cursor:pointer;
+  }
+  .btn-primary{background:var(--blueprint); color:#fff;}
+  .btn-outline{background:none; border:1.5px solid var(--blueprint); color:var(--blueprint);}
+  .btn-rust{background:var(--rust); color:#fff;}
+  .totals{margin-top:14px; border-top:2px solid var(--blueprint); padding-top:10px;}
+  .totals .line{display:flex; justify-content:space-between; font-size:13px; padding:3px 0;}
+  .totals .grand{font-weight:800; font-size:16px; color:var(--blueprint); border-top:1px dashed var(--line); margin-top:6px; padding-top:8px;}
+  .field{margin-bottom:10px;}
+  .field label{display:block; font-size:11.5px; font-weight:600; color:var(--steel); margin-bottom:4px; font-family:'Space Mono',monospace; text-transform:uppercase; letter-spacing:.03em;}
+  .field input, .field select, .field textarea{
+    width:100%; border:1px solid var(--line); border-radius:6px; padding:9px 10px; font-size:13.5px; font-family:inherit; resize:vertical;
+  }
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .result-box{
+    background:var(--paper-2);
+    border:1.5px dashed var(--steel);
+    border-radius:8px;
+    padding:12px 14px;
+    margin-top:10px;
+    font-size:13px;
+  }
+  .result-box .big{font-family:'Archivo',sans-serif; font-weight:800; font-size:19px; color:var(--rust);}
+  canvas{
+    width:100%;
+    touch-action:none;
+    border:1.5px solid var(--blueprint);
+    border-radius:6px;
+    background:
+      linear-gradient(#e4ecf3 1px, transparent 1px) 0 0/20px 20px,
+      linear-gradient(90deg,#e4ecf3 1px, transparent 1px) 0 0/20px 20px,
+      #f4f8fb;
+  }
+  .tool-row{display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px;}
+  .tool-row button{
+    border:1px solid var(--line); background:#fff; border-radius:6px; padding:8px 10px; font-size:12px; cursor:pointer; font-weight:600;
+  }
+  .tool-row button.active{background:var(--blueprint); color:#fff; border-color:var(--blueprint);}
+  select.cat-select{font-size:11px;}
+  footer.status{
+    position:fixed; bottom:0; left:0; right:0;
+    background:var(--blueprint); color:var(--paper-2);
+    font-family:'Space Mono',monospace;
+    font-size:10.5px; letter-spacing:.04em;
+    padding:9px 14px; display:flex; justify-content:space-between;
+  }
+  footer.status .dot{color:var(--ok);}
+
+  /* ---------- AUTH (LOGIN/DAFTAR) ---------- */
+  #authScreen{
+    position:fixed; inset:0; z-index:1000;
+    background:linear-gradient(160deg, var(--blueprint), var(--blueprint-2) 60%, var(--rust-2));
+    display:flex; align-items:center; justify-content:center;
+    padding:20px; overflow-y:auto;
+  }
+  #authScreen.hidden{display:none;}
+  .app-shell.auth-locked{display:none;}
+  .auth-box{
+    width:100%; max-width:380px;
+    background:var(--white);
+    border-radius:14px;
+    padding:26px 22px;
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+  }
+  .auth-logo-row{display:flex; align-items:center; gap:10px; margin-bottom:6px;}
+  .auth-logo-row img{width:38px; height:38px; border-radius:8px; object-fit:cover;}
+  .auth-logo-row h1{font-family:'Archivo',sans-serif; font-size:19px; color:var(--blueprint); margin:0;}
+  .auth-sub{font-size:12px; color:var(--steel); margin:0 0 18px;}
+  .auth-tabs{display:flex; border-radius:8px; overflow:hidden; border:1px solid var(--line); margin-bottom:18px;}
+  .auth-tab-btn{
+    flex:1; padding:9px; background:var(--paper-2); border:none; cursor:pointer;
+    font-family:'Space Mono',monospace; font-size:11.5px; font-weight:700; letter-spacing:.03em;
+    text-transform:uppercase; color:var(--steel);
+  }
+  .auth-tab-btn.active{background:var(--blueprint); color:#fff;}
+  .auth-form{display:none;}
+  .auth-form.active{display:block;}
+  .auth-field{margin-bottom:12px;}
+  .auth-field label{display:block; font-size:11.5px; font-weight:600; color:var(--steel); margin-bottom:4px; font-family:'Space Mono',monospace; text-transform:uppercase; letter-spacing:.03em;}
+  .auth-field input{
+    width:100%; border:1px solid var(--line); border-radius:6px; padding:10px 11px; font-size:13.5px; font-family:inherit;
+  }
+  .auth-field input:focus{outline:none; border-color:var(--blueprint);}
+  .auth-pw-row{position:relative;}
+  .auth-pw-row .auth-eye{
+    position:absolute; right:9px; top:50%; transform:translateY(-50%);
+    background:none; border:none; cursor:pointer; font-size:13px; color:var(--steel); padding:2px 4px;
+  }
+  .auth-submit{
+    width:100%; border:none; border-radius:7px; padding:12px 14px;
+    background:var(--rust); color:#fff; font-weight:800; font-size:14px;
+    font-family:'Inter',sans-serif; cursor:pointer; margin-top:4px;
+  }
+  .auth-switch{font-size:12px; text-align:center; margin-top:14px; color:var(--steel);}
+  .auth-switch a{color:var(--rust); font-weight:700; text-decoration:none; cursor:pointer;}
+  .auth-msg{font-size:12px; margin:10px 0 0; padding:9px 10px; border-radius:6px; display:none;}
+  .auth-msg.show{display:block;}
+  .auth-msg.err{background:#fdecea; color:#b3261e;}
+  .auth-msg.ok{background:#e6f4ea; color:#1e7b34;}
+  .auth-forgot{display:block; text-align:right; font-size:11px; color:var(--steel); margin:-4px 0 14px; text-decoration:none;}
+  .user-chip{
+    display:flex; align-items:center; gap:8px; justify-content:space-between;
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
+    border-radius:8px; padding:8px 12px; margin:0 16px 10px;
+    font-size:11.5px; color:#fff;
+  }
+  .user-chip .who{line-height:1.4;}
+  .user-chip .who b{display:block; font-size:12.5px;}
+  .user-chip button{
+    background:rgba(255,255,255,.18); border:none; color:#fff; border-radius:5px;
+    padding:6px 10px; font-size:11px; font-weight:700; cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ AUTH SCREEN (LOGIN / DAFTAR) ============ -->
+<div id="authScreen">
+  <div class="auth-box">
+    <div class="auth-logo-row">
+      <img id="authLogoImg" src="" alt="Logo">
+      <h1>RAB Cerdas</h1>
+    </div>
+    <p class="auth-sub">Masuk atau daftar untuk mulai menghitung RAB &amp; sketsa interior.</p>
+
+    <div class="auth-tabs">
+      <button type="button" class="auth-tab-btn active" data-auth-tab="login">Masuk</button>
+      <button type="button" class="auth-tab-btn" data-auth-tab="register">Daftar</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form id="loginForm" class="auth-form active" autocomplete="on">
+      <div class="auth-field">
+        <label>Email atau No HP/WA</label>
+        <input type="text" id="loginIdentifier" placeholder="nama@email.com atau 08xxxxxxxxxx" required>
+      </div>
+      <div class="auth-field auth-pw-row">
+        <label>Sandi</label>
+        <input type="password" id="loginPassword" placeholder="Masukkan sandi" required>
+        <button type="button" class="auth-eye" data-toggle-for="loginPassword">👁</button>
+      </div>
+      <a class="auth-forgot" id="forgotPasswordLink">Lupa sandi?</a>
+      <button type="submit" class="auth-submit">Masuk</button>
+      <div class="auth-msg" id="loginMsg"></div>
+      <p class="auth-switch">Belum punya akun? <a data-auth-tab="register">Daftar di sini</a></p>
+    </form>
+
+    <!-- DAFTAR -->
+    <form id="registerForm" class="auth-form" autocomplete="on">
+      <div class="auth-field">
+        <label>Nama Lengkap</label>
+        <input type="text" id="regName" placeholder="Nama Anda" required>
+      </div>
+      <div class="auth-field">
+        <label>Email</label>
+        <input type="email" id="regEmail" placeholder="nama@email.com" required>
+      </div>
+      <div class="auth-field">
+        <label>No HP/WA</label>
+        <input type="tel" id="regPhone" placeholder="08xxxxxxxxxx" required>
+      </div>
+      <div class="auth-field auth-pw-row">
+        <label>Sandi</label>
+        <input type="password" id="regPassword" placeholder="Minimal 6 karakter" required minlength="6">
+        <button type="button" class="auth-eye" data-toggle-for="regPassword">👁</button>
+      </div>
+      <div class="auth-field auth-pw-row">
+        <label>Ulangi Sandi</label>
+        <input type="password" id="regPassword2" placeholder="Ulangi sandi" required minlength="6">
+        <button type="button" class="auth-eye" data-toggle-for="regPassword2">👁</button>
+      </div>
+      <button type="submit" class="auth-submit">Daftar Akun</button>
+      <div class="auth-msg" id="registerMsg"></div>
+      <p class="auth-switch">Sudah punya akun? <a data-auth-tab="login">Masuk di sini</a></p>
+    </form>
+  </div>
+</div>
+
+<div class="app-shell auth-locked" id="appShell">
+
+<header>
+  <div class="badge-pro">PRO</div>
+  <div class="brand-row">
+    <img id="brandLogoImg" class="brand-logo" alt="Logo Aplikasi">
+    <div>
+      <div class="eyebrow" id="brandEyebrow">Alat Bantu Tukang Interior</div>
+      <h1>RAB Cerdas</h1>
+    </div>
+  </div>
+  <p class="sub">Hitung RAB, kebutuhan material furnitur &amp; finishing, dan buat sketsa layout — dalam satu tempat.</p>
+</header>
+
+<nav>
+  <button class="tab-btn active" data-tab="rab">RAB</button>
+  <button class="tab-btn" data-tab="bahan">Bahan</button>
+  <button class="tab-btn" data-tab="jasa">Jasa</button>
+  <button class="tab-btn" data-tab="harga">Harga</button>
+  <button class="tab-btn" data-tab="estimasi">Estimasi</button>
+  <button class="tab-btn" data-tab="sketsa">Sketsa</button>
+  <button class="tab-btn" data-tab="profil">👤 Profil</button>
+</nav>
+
+<main>
+
+  <!-- ============ RAB ============ -->
+  <section id="tab-rab" class="active">
+    <div class="card">
+
+    <div class="card">
+      <h2><span class="num">00b</span> Info Proyek &amp; Klien</h2>
+      <div class="grid2">
+        <div class="field"><label>Nama Proyek</label><input type="text" id="piProyek" placeholder="Interior Rumah Bpk. Andi" value="Interior Dapur &amp; Ruang Keluarga"></div>
+        <div class="field"><label>Nama Klien</label><input type="text" id="piKlien" placeholder="Nama klien" value=""></div>
+        <div class="field"><label>Alamat/Lokasi</label><input type="text" id="piAlamat" placeholder="Alamat pengerjaan" value=""></div>
+        <div class="field"><label>Tanggal Proyek</label><input type="date" id="piTanggal"></div>
+        <div class="field"><label>Luas/Volume Total Proyek (m²)</label><input type="number" id="piVolume" placeholder="0" value=""></div>
+      </div>
+      <p class="desc" style="margin-top:2px;">Tanggal terisi otomatis hari ini &mdash; ubah bila perlu. Luas total proyek dipakai sebagai isian awal di kalkulator Jasa/m² dan tercetak di invoice.</p>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="saveProject">💾 Simpan Proyek</button>
+        <button class="btn btn-outline" id="loadProject">Muat Proyek Tersimpan</button>
+      </div>
+      <p id="projectStatus" style="font-size:11.5px; color:var(--steel); margin-top:8px;"></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">01</span> Rencana Anggaran Biaya</h2>
+      <p class="desc">Tambahkan item pekerjaan, volume, dan harga satuan. Total dihitung otomatis.<br>
+      <b style="color:var(--ok);">Versi PRO: item tanpa batas.</b></p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:640px;">
+        <thead>
+          <tr>
+            <th style="width:13%">Tahap</th>
+            <th style="width:12%">Ruangan</th>
+            <th style="width:18%">Uraian</th>
+            <th style="width:8%">Vol.</th>
+            <th style="width:8%">Satuan</th>
+            <th style="width:14%">Harga Satuan</th>
+            <th style="width:14%">Jumlah</th>
+            <th style="width:5%"></th>
+          </tr>
+        </thead>
+        <tbody id="rabBody"></tbody>
+      </table>
+      </div>
+      <datalist id="ruanganList">
+        <option value="Ruang Tamu">
+        <option value="Ruang Keluarga">
+        <option value="Dapur">
+        <option value="Kamar Tidur Utama">
+        <option value="Kamar Tidur Anak">
+        <option value="Kamar Mandi">
+        <option value="Ruang Makan">
+        <option value="Ruang Kerja">
+      </datalist>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="addRow">+ Tambah Item</button>
+      </div>
+
+      <div class="totals">
+        <p style="font-family:'Space Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--steel); margin:0 0 4px;">Rekap per Ruangan</p>
+        <div id="rekapRuangan"></div>
+        <p style="font-family:'Space Mono',monospace; font-size:10.5px; text-transform:uppercase; letter-spacing:.04em; color:var(--steel); margin:10px 0 4px;">Rekap per Tahap Pengerjaan</p>
+        <div id="rekapTahap"></div>
+        <div class="line" style="border-top:1px dashed var(--line); margin-top:8px; padding-top:8px;"><span>Subtotal</span><span id="subtotal">Rp 0</span></div>
+        <div class="line">
+          <span>PPN (%)
+            <input type="number" id="ppnPct" value="11" style="width:50px; display:inline-block; padding:2px 4px; margin-left:4px;">
+          </span>
+          <span id="ppnAmt">Rp 0</span>
+        </div>
+        <div class="line">
+          <span>Biaya Lain-lain (%)
+            <input type="number" id="miscPct" value="0" style="width:50px; display:inline-block; padding:2px 4px; margin-left:4px;">
+          </span>
+          <span id="miscAmt">Rp 0</span>
+        </div>
+        <div class="line grand"><span>TOTAL RAB</span><span id="grandTotal">Rp 0</span></div>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="exportRab">⬇ Ekspor Ringkasan</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">01b</span> Skema Pembayaran (Termin)</h2>
+      <p class="desc">Bagi Total RAB menjadi beberapa termin pembayaran.</p>
+      <div class="field" style="max-width:200px;">
+        <label>Jumlah Termin</label>
+        <select id="terminJumlah">
+          <option value="2">2 Termin</option>
+          <option value="3" selected>3 Termin</option>
+          <option value="4">4 Termin</option>
+        </select>
+      </div>
+      <div id="terminBody"></div>
+      <p id="terminWarning" style="font-size:11.5px; color:var(--rust); margin-top:6px;"></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">01c</span> Cetak / Ekspor RAB</h2>
+      <p class="desc">Buat tampilan RAB yang rapi untuk dicetak atau disimpan sebagai PDF (lewat dialog cetak browser).</p>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="printRab">🖨 Cetak / Simpan PDF</button>
+        <button class="btn btn-outline" id="shareWa">📲 Bagikan via WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BAHAN ============ -->
+  <section id="tab-bahan">
+        <div class="card">
+      <h2><span class="num">02</span> Kebutuhan Multiplek/Plywood — Furnitur Custom</h2>
+      <p class="desc">Untuk kitchen set, lemari pakaian, partisi, atau furnitur built-in lainnya. Tambahkan baris untuk tiap ketebalan/jenis yang dipakai.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Jenis/Ketebalan</th><th>Luas (m²)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="mpBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="mpAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="mpAddJenis">+ Tambah Jenis/Ketebalan Baru</button>
+      </div>
+      <div class="result-box" id="mpResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">03</span> Kebutuhan HPL Finishing</h2>
+      <p class="desc">Untuk lapisan finishing pintu kabinet, top table, atau panel dinding. Tambahkan baris untuk tiap seri/motif HPL yang dipakai.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Seri HPL</th><th>Luas (m²)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="hplBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="hplAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="hplAddJenis">+ Tambah Seri HPL Baru</button>
+      </div>
+      <div class="result-box" id="hplResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">03b</span> Kebutuhan Panel Plafon</h2>
+      <p class="desc">Material panel plafon (langit-langit) — Gypsum, PVC, WPC, atau Wallboard. Tambahkan baris untuk tiap jenis yang dipakai (rangka besi hollow dihitung terpisah di bawah).</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Jenis Bahan</th><th>Luas (m²)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="plfBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="plfAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="plfAddJenis">+ Tambah Jenis Bahan Baru</button>
+      </div>
+      <div class="result-box" id="plfResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">03c</span> Kebutuhan Panel Partisi (Sekat Ruangan)</h2>
+      <p class="desc">Untuk pengerjaan dinding/sekat baru — Wallboard, WPC, UV Marmer, Walfoam, atau jenis panel dinding lain. Terpisah dari Plafon karena beda pekerjaan (rangka dihitung terpisah di bawah).</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Jenis Bahan</th><th>Luas (m²)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="partisiBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="partisiAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="partisiAddJenis">+ Tambah Jenis Bahan Baru</button>
+      </div>
+      <div class="result-box" id="partisiResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">04</span> Kebutuhan Dinding</h2>
+      <p class="desc">Finishing/pelapis dinding existing — Wallboard, WPC, UV Marmer, Walfoam, dsb. Katalog bahan sama dengan kartu Partisi di atas.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Jenis Bahan</th><th>Luas (m²)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="dindingBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="dindingAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="dindingAddJenis">+ Tambah Jenis Bahan Baru</button>
+      </div>
+      <div class="result-box" id="dindingResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">05</span> Kebutuhan Lantai</h2>
+      <p class="desc">Vinyl, SPC, PVC Deck, atau jenis lantai lain. Dihitung per dus.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:560px;">
+        <thead><tr><th>Jenis Bahan</th><th>Luas (m²)</th><th>Luas/Dus (m²)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="lantaiBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="lantaiAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="lantaiAddJenis">+ Tambah Jenis Bahan Baru</button>
+      </div>
+      <div class="result-box" id="lantaiResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">06</span> Kebutuhan Cat Dekoratif</h2>
+      <p class="desc">Cat Tembok, Cat Kusen, Cat Pintu/Jendela, Cat Duco, atau jenis cat lain. Dihitung per liter.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:640px;">
+        <thead><tr><th>Jenis Cat</th><th>Luas Area (m²)</th><th>Daya Sebar (m²/L)</th><th>Lapis</th><th></th></tr></thead>
+        <tbody id="catBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="catAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="catAddJenis">+ Tambah Jenis Cat Baru</button>
+      </div>
+      <div class="result-box" id="catResult">Isi form untuk melihat hasil.</div>
+    </div>
+    <div class="card">
+      <h2><span class="num">07</span> Kebutuhan Engsel, Rel Laci &amp; Handle</h2>
+      <p class="desc">Untuk kitchen set, lemari, atau kabinet custom lainnya. Tiap bagian bisa punya beberapa jenis/ukuran sekaligus.</p>
+
+      <p style="font-weight:700; font-size:12.5px; margin:10px 0 4px;">Engsel</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:400px;">
+        <thead><tr><th>Jenis Engsel</th><th>Jumlah (pcs)</th><th></th></tr></thead>
+        <tbody id="engselBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="engselAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="engselAddJenis">+ Tambah Jenis Engsel</button>
+      </div>
+
+      <p style="font-weight:700; font-size:12.5px; margin:16px 0 4px;">Rel Laci</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Jenis Rel Laci</th><th>Ukuran</th><th>Jumlah (pasang)</th><th></th></tr></thead>
+        <tbody id="relLaciBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="relLaciAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="relLaciAddJenis">+ Tambah Jenis Rel Laci</button>
+      </div>
+
+      <p style="font-weight:700; font-size:12.5px; margin:16px 0 4px;">Handle/Pegangan</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Jenis Handle</th><th>Ukuran</th><th>Jumlah (pcs)</th><th></th></tr></thead>
+        <tbody id="handleBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="handleAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="handleAddJenis">+ Tambah Jenis Handle</button>
+      </div>
+
+      <div class="result-box" id="akResult" style="margin-top:14px;">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">08</span> Kebutuhan Titik Lampu</h2>
+      <p class="desc">Bisa lebih dari satu jenis lampu (mis. downlight, gantung, LED strip) dalam satu proyek.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:400px;">
+        <thead><tr><th>Jenis Lampu</th><th>Jumlah Titik</th><th></th></tr></thead>
+        <tbody id="lampuBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="lampuAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="lampuAddJenis">+ Tambah Jenis Lampu</button>
+      </div>
+      <div class="result-box" id="lpResult">Isi form untuk melihat hasil.</div>
+    </div>
+    <div class="card">
+      <h2><span class="num">09</span> Kebutuhan Rangka — Plafon/Partisi</h2>
+      <p class="desc">Bisa lebih dari satu jenis rangka (mis. Besi Hollow, Kayu Kaso, Aluminium) dalam satu proyek.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:640px;">
+        <thead><tr><th>Jenis Rangka</th><th>Luas Area (m²)</th><th>Jarak (cm)</th><th>Panjang/Batang (m)</th><th>Waste (%)</th><th></th></tr></thead>
+        <tbody id="rangkaBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="rangkaAddRow">+ Tambah Item</button>
+        <button class="btn btn-outline" id="rangkaAddJenis">+ Tambah Jenis Rangka</button>
+      </div>
+      <div class="result-box" id="bhResult">Isi form untuk melihat hasil.</div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">10</span> Kebutuhan Granit/Top Table Meja Dapur</h2>
+      <p class="desc">Untuk top table kitchen set, meja pantry, atau island counter.</p>
+      <div class="grid2">
+        <div class="field"><label>Panjang Meja (m)</label><input type="number" id="grP" value="3"></div>
+        <div class="field"><label>Lebar Meja (m)</label><input type="number" id="grL" value="0.6"></div>
+        <div class="field"><label>Waste Potongan (%)</label><input type="number" id="grWaste" value="15"></div>
+      </div>
+      <div class="result-box" id="grResult">Isi form untuk melihat hasil.</div>
+    </div>
+  </section>
+
+  <!-- ============ JASA ============ -->
+  <section id="tab-jasa">
+    <div class="card">
+      <h2><span class="num">&#128119;</span> Kategori &amp; Harga Jasa per Meter</h2>
+      <p class="desc">Atur sendiri harga jasa per kategori pekerjaan. Harga ini otomatis dipakai saat menghitung di bawah dan saat ditambahkan ke RAB.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:480px;">
+        <thead><tr><th>Kategori Pekerjaan</th><th>Satuan</th><th>Harga per Satuan</th><th></th></tr></thead>
+        <tbody id="jasaKategoriBody"></tbody>
+      </table>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="jasaAddKategori">+ Tambah Kategori Jasa</button>
+        <button class="btn btn-primary" id="saveJasaKategori">💾 Simpan Kategori &amp; Harga Jasa</button>
+      </div>
+      <p id="jasaKategoriStatus" style="font-size:11.5px; color:var(--steel); margin-top:8px;"></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">&#128119;</span> Kalkulator Biaya Jasa/Upah Tukang</h2>
+      <p class="desc">Hitung upah kerja terpisah dari biaya material, lalu tambahkan langsung ke RAB.</p>
+      <div class="grid2">
+        <div class="field"><label>Jenis Pekerjaan</label>
+          <select id="jsJenis"></select>
+        </div>
+        <div class="field"><label>Volume Pekerjaan</label><input type="number" id="jsVolume" placeholder="0" value=""></div>
+        <div class="field"><label>Upah per Satuan (Rp)</label><input type="number" id="jsUpah" placeholder="0" value="0"></div>
+        <div class="field"><label>Tingkat Kesulitan</label>
+          <select id="jsTingkat">
+            <option value="1">Standar (x1)</option>
+            <option value="1.3">Custom / Detail (x1.3)</option>
+            <option value="1.6">Sangat Detail / Ukir (x1.6)</option>
+          </select>
+        </div>
+      </div>
+      <div class="result-box" id="jsResult">Isi form untuk melihat hasil.</div>
+      <div class="row-actions">
+        <button class="btn btn-primary" id="jsAddToRab">+ Tambahkan ke RAB</button>
+      </div>
+      <p id="jsStatus" style="font-size:11.5px; color:var(--ok); margin-top:8px;"></p>
+    </div>
+  </section>
+
+  <!-- ============ HARGA ============ -->
+  <section id="tab-harga">
+    <div class="card">
+      <h2><span class="num">$</span> Daftar Harga Material</h2>
+      <p class="desc">Sesuaikan harga satuan sesuai harga toko/supplier langganan Anda. Harga ini dipakai di tab Estimasi.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:640px;">
+        <thead><tr><th style="width:48%">Material</th><th style="width:20%">Satuan</th><th style="width:32%">Harga Satuan</th></tr></thead>
+        <tbody id="hargaBody"></tbody>
+      </table>
+      <div class="row-actions">
+        <button class="btn btn-primary" id="saveHarga">Simpan Harga</button>
+        <button class="btn btn-outline" id="resetHarga">Reset ke Default</button>
+      </div>
+      <p id="hargaStatus" style="font-size:11.5px; color:var(--steel); margin-top:8px;"></p>
+    </div>
+  </section>
+
+  <!-- ============ ESTIMASI ============ -->
+  <section id="tab-estimasi">
+    <div class="card">
+      <h2><span class="num">&Sigma;</span> Estimasi Total Kebutuhan Bahan</h2>
+      <p class="desc">Dihitung otomatis dari seluruh kalkulator di tab Bahan &times; harga di tab Harga.</p>
+      <div style="overflow-x:auto;">
+      <table style="min-width:640px;">
+        <thead><tr><th style="width:38%">Material</th><th style="width:20%">Qty</th><th style="width:21%">Harga Satuan</th><th style="width:21%">Subtotal</th></tr></thead>
+        <tbody id="estimasiBody"></tbody>
+      </table>
+      <div class="totals">
+        <div class="line grand"><span>TOTAL ESTIMASI BAHAN</span><span id="estimasiTotal">Rp 0</span></div>
+      </div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="exportEstimasi">⬇ Ekspor Estimasi</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKETSA ============ -->
+  <section id="tab-sketsa">
+    <div class="card">
+      <h2><span class="num">11</span> Sketsa Layout / Gambar Kerja</h2>
+      <p class="desc">Gambar bentuk ruangan &amp; tata letak furnitur interior. 1 kotak grid = 20 cm (skala bisa disesuaikan).</p>
+      <div class="tool-row">
+        <button data-tool="wall" class="active">Dinding</button>
+        <select id="furnitureSelect" style="border:1px solid var(--line); border-radius:6px; padding:8px 6px; font-size:12px; font-weight:600;">
+          <option value="sofa">Sofa</option>
+          <option value="mejamakan">Meja Makan</option>
+          <option value="pintu">Pintu</option>
+          <option value="kasur">Tempat Tidur</option>
+          <option value="counter">Kitchen Counter</option>
+          <option value="lemari">Lemari</option>
+          <option value="mejakerja">Meja Kerja</option>
+          <option value="jendela">Jendela</option>
+        </select>
+        <button data-tool="furniture">Taruh Furnitur</button>
+        <button data-tool="rect">Kotak Custom</button>
+        <button data-tool="text">🏷 Label</button>
+        <button data-tool="erase">Hapus Objek</button>
+        <button id="clearCanvas" style="margin-left:auto;">Bersihkan Semua</button>
+      </div>
+      <p class="desc" style="color:var(--ok);">Versi PRO: semua preset furnitur, label teks &amp; ekspor gambar aktif.</p>
+      <canvas id="board" height="360"></canvas>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="exportPng">⬇ Ekspor PNG</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFIL ============ -->
+  <section id="tab-profil">
+    <div class="card">
+      <h2><span class="num">👤</span> Info Akun</h2>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:13.5px;">
+        <div>
+          <div style="color:var(--steel); font-size:11px; text-transform:uppercase; letter-spacing:.05em;">Nama</div>
+          <div id="profilNama" style="font-weight:700;">-</div>
+        </div>
+        <div>
+          <div style="color:var(--steel); font-size:11px; text-transform:uppercase; letter-spacing:.05em;">Email</div>
+          <div id="profilEmail" style="font-weight:700;">-</div>
+        </div>
+        <div>
+          <div style="color:var(--steel); font-size:11px; text-transform:uppercase; letter-spacing:.05em;">No HP/WA</div>
+          <div id="profilPhone" style="font-weight:700;">-</div>
+        </div>
+        <div>
+          <div style="color:var(--steel); font-size:11px; text-transform:uppercase; letter-spacing:.05em;">Status Akun</div>
+          <div id="profilStatus" style="font-weight:700; color:var(--ok);">PRO (Aktif)</div>
+        </div>
+      </div>
+      <button type="button" id="logoutBtn" class="btn btn-outline" style="margin-top:16px; width:100%;">Keluar dari Akun</button>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">🏢</span> Branding Usaha</h2>
+      <p class="desc">Ganti nama, logo &amp; alamat bawaan aplikasi dengan identitas usaha Anda sendiri. Otomatis tampil di header dan invoice cetak/unduh — bikin RAB terlihat lebih profesional.</p>
+      <div class="field"><label>Nama Usaha</label><input type="text" id="brandNameInput" placeholder="Contoh: Studio Interior Santi"></div>
+      <div class="field"><label>Alamat Usaha</label><textarea id="brandAddressInput" rows="2" placeholder="Contoh: Jl. Merdeka No. 10, Bandung"></textarea></div>
+      <div class="field"><label>Logo Usaha (gambar)</label><input type="file" id="brandLogoInput" accept="image/*"></div>
+      <div class="row-actions">
+        <button class="btn btn-outline" id="saveBrand">💾 Simpan Branding</button>
+        <button class="btn btn-outline" id="resetBrand">Reset ke Bawaan</button>
+      </div>
+      <p id="brandStatus" style="font-size:11.5px; color:var(--steel); margin-top:8px;"></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">🔒</span> Keamanan</h2>
+      <p class="desc">Kirim link ganti sandi ke email akun Anda. Buka link itu untuk membuat sandi baru.</p>
+      <button type="button" id="changePasswordBtn" class="btn btn-outline">Kirim Link Ganti Sandi</button>
+      <p id="changePasswordStatus" style="font-size:11.5px; margin-top:8px;"></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">📄</span> Kebijakan &amp; Privasi</h2>
+      <div style="font-size:12.5px; line-height:1.8; color:var(--ink);">
+        <p><b>Data yang disimpan:</b> nama, email, dan No HP/WA Anda disimpan untuk keperluan login dan pemulihan akun. Data proyek RAB, harga material, dan branding yang Anda simpan tersimpan di akun Anda secara pribadi dan tidak dapat diakses pengguna lain.</p>
+        <p><b>Tidak dibagikan ke pihak ketiga:</b> data Anda tidak dijual atau dibagikan ke pihak luar untuk kepentingan iklan.</p>
+        <p><b>Hapus akun/data:</b> hubungi admin lewat tombol WhatsApp jika Anda ingin akun beserta data terkait dihapus permanen.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="num">ℹ️</span> Tentang Aplikasi</h2>
+      <div style="font-size:13px; line-height:1.9;">
+        <div><b>RAB Cerdas PRO</b> — Kalkulator RAB &amp; Sketsa Interior</div>
+        <div style="color:var(--steel); font-size:12px;">Alat bantu tukang &amp; desainer interior untuk menghitung RAB, kebutuhan material, dan membuat sketsa layout ruangan.</div>
+        <div style="margin-top:10px;">Versi Aplikasi: <b>1.0</b></div>
+        <div>Kontak Admin: <b>0852-6367-7768</b></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="status">
+  <span>rab-interior.pro</span>
+  <span style="color:var(--ok);">● versi PRO — semua fitur aktif</span>
+</footer>
+
+</div><!-- /#appShell -->
+
+<div id="printArea"></div>
+<script>
+// ============================================================
+// AUTENTIKASI (LOGIN / DAFTAR)
+// Pakai Firebase Authentication + Firestore bila firebase-config.js
+// sudah diisi (window.FIREBASE_READY === true). Jika belum, otomatis
+// fallback ke akun lokal (localStorage) di HP ini saja, supaya app
+// tetap bisa dipakai sebelum Firebase disetel.
+// ============================================================
+function fbActive(){
+  return window.FIREBASE_READY === true && typeof firebase !== 'undefined';
+}
+function fbErrorMsg(err){
+  const map = {
+    'auth/email-already-in-use':'Email sudah terdaftar. Silakan masuk.',
+    'auth/invalid-email':'Format email tidak valid.',
+    'auth/weak-password':'Sandi terlalu lemah (minimal 6 karakter).',
+    'auth/user-not-found':'Akun tidak ditemukan. Periksa email/No HP atau daftar dulu.',
+    'auth/wrong-password':'Sandi salah. Coba lagi.',
+    'auth/invalid-credential':'Email/No HP atau sandi salah.',
+    'auth/too-many-requests':'Terlalu banyak percobaan. Coba lagi beberapa saat lagi.',
+    'auth/network-request-failed':'Tidak ada koneksi internet. Periksa jaringan Anda.'
+  };
+  return (err && map[err.code]) || (err && err.message) || 'Terjadi kesalahan. Coba lagi.';
+}
+
+// ---- Fallback lokal (dipakai hanya bila Firebase belum dikonfigurasi) ----
+const AUTH_USERS_KEY = 'rabcerdas_users';
+const AUTH_SESSION_KEY = 'rabcerdas_session';
+function authGetUsers(){
+  try{ return JSON.parse(localStorage.getItem(AUTH_USERS_KEY)) || []; }
+  catch(e){ return []; }
+}
+function authSaveUsers(users){
+  localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users));
+}
+async function authHash(text){
+  try{
+    if(window.crypto && crypto.subtle && window.isSecureContext){
+      const enc = new TextEncoder().encode('rabcerdas_salt_'+text);
+      const buf = await crypto.subtle.digest('SHA-256', enc);
+      return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+    }
+  }catch(e){}
+  let h = 0, s = 'rabcerdas_salt_'+text;
+  for(let i=0;i<s.length;i++){ h = ((h<<5)-h)+s.charCodeAt(i); h|=0; }
+  return 'fb'+Math.abs(h).toString(16);
+}
+function authGetSessionUser(){
+  const email = localStorage.getItem(AUTH_SESSION_KEY);
+  if(!email) return null;
+  return authGetUsers().find(u=>u.email===email) || null;
+}
+
+function authNormalizePhone(phone){
+  return String(phone||'').replace(/[^\d]/g,'');
+}
+
+// ---- UI helpers (dipakai untuk kedua mode) ----
+function authShowMsg(elId, text, type){
+  const el = document.getElementById(elId);
+  if(!el) return;
+  el.textContent = text;
+  el.className = 'auth-msg show ' + (type||'err');
+}
+function authClearMsg(elId){
+  const el = document.getElementById(elId);
+  if(!el) return;
+  el.textContent = '';
+  el.className = 'auth-msg';
+}
+function authSwitchTab(tab){
+  document.querySelectorAll('.auth-tab-btn').forEach(b=>b.classList.toggle('active', b.dataset.authTab===tab));
+  document.getElementById('loginForm').classList.toggle('active', tab==='login');
+  document.getElementById('registerForm').classList.toggle('active', tab==='register');
+  authClearMsg('loginMsg');
+  authClearMsg('registerMsg');
+}
+document.querySelectorAll('[data-auth-tab]').forEach(el=>{
+  el.addEventListener('click', ()=> authSwitchTab(el.dataset.authTab));
+});
+document.querySelectorAll('.auth-eye').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const input = document.getElementById(btn.dataset.toggleFor);
+    if(!input) return;
+    input.type = input.type==='password' ? 'text' : 'password';
+  });
+});
+
+let currentUserProfile = null;
+function authSetLoggedInUI(user){
+  currentUserProfile = user;
+  const nomorProfil = document.getElementById('profilNama');
+  const emailProfil = document.getElementById('profilEmail');
+  const phoneProfil = document.getElementById('profilPhone');
+  if(user){
+    if(nomorProfil) nomorProfil.textContent = user.name || '-';
+    if(emailProfil) emailProfil.textContent = user.email || '-';
+    if(phoneProfil) phoneProfil.textContent = user.phone || '-';
+  }
+}
+function authEnterApp(user){
+  document.getElementById('authScreen').classList.add('hidden');
+  document.getElementById('appShell').classList.remove('auth-locked');
+  authSetLoggedInUI(user);
+  // Muat data akun (branding, harga custom, proyek tersimpan) dari cloud
+  // sekarang setelah user benar-benar login (sebelumnya currentUser masih kosong).
+  loadBranding();
+  loadHarga();
+  loadJasaKategori();
+  autoLoadProjectOnStart();
+  logEvent('user_logged_in', {email:user.email, mode: fbActive()?'firebase':'lokal'});
+}
+
+// ---- REGISTER ----
+document.getElementById('registerForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  authClearMsg('registerMsg');
+  const name = document.getElementById('regName').value.trim();
+  const email = document.getElementById('regEmail').value.trim().toLowerCase();
+  const phoneRaw = document.getElementById('regPhone').value.trim();
+  const phone = authNormalizePhone(phoneRaw);
+  const pass = document.getElementById('regPassword').value;
+  const pass2 = document.getElementById('regPassword2').value;
+
+  if(!name || !email || !phone || !pass || !pass2){
+    authShowMsg('registerMsg','Mohon lengkapi semua kolom.'); return;
+  }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    authShowMsg('registerMsg','Format email tidak valid.'); return;
+  }
+  if(phone.length < 9){
+    authShowMsg('registerMsg','Nomor HP/WA tidak valid.'); return;
+  }
+  if(pass.length < 6){
+    authShowMsg('registerMsg','Sandi minimal 6 karakter.'); return;
+  }
+  if(pass !== pass2){
+    authShowMsg('registerMsg','Konfirmasi sandi tidak cocok.'); return;
+  }
+
+  const submitBtn = e.target.querySelector('.auth-submit');
+  submitBtn.disabled = true; submitBtn.textContent = 'Memproses…';
+
+  if(fbActive()){
+    try{
+      const cred = await firebase.auth().createUserWithEmailAndPassword(email, pass);
+      await cred.user.updateProfile({displayName:name});
+      const db = firebase.firestore();
+      await db.collection('users').doc(cred.user.uid).set({
+        name, email, phone, createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      // indeks no HP -> email, supaya bisa dipakai login dengan No HP/WA
+      await db.collection('phoneIndex').doc(phone).set({uid:cred.user.uid, email});
+
+      authShowMsg('registerMsg','Akun berhasil dibuat! Mengarahkan ke aplikasi…','ok');
+      logEvent('user_registered', {email, mode:'firebase'});
+      setTimeout(()=> authEnterApp({name, email, phone}), 500);
+    }catch(err){
+      authShowMsg('registerMsg', fbErrorMsg(err));
+    }finally{
+      submitBtn.disabled = false; submitBtn.textContent = 'Daftar Akun';
+    }
+    return;
+  }
+
+  // ---- fallback lokal ----
+  const users = authGetUsers();
+  if(users.some(u=>u.email===email)){
+    authShowMsg('registerMsg','Email sudah terdaftar. Silakan masuk.');
+    submitBtn.disabled = false; submitBtn.textContent = 'Daftar Akun'; return;
+  }
+  if(users.some(u=>u.phone===phone)){
+    authShowMsg('registerMsg','No HP/WA sudah terdaftar. Silakan masuk.');
+    submitBtn.disabled = false; submitBtn.textContent = 'Daftar Akun'; return;
+  }
+  const passHash = await authHash(pass);
+  const newUser = {name, email, phone, passHash, createdAt:new Date().toISOString()};
+  users.push(newUser);
+  authSaveUsers(users);
+  localStorage.setItem(AUTH_SESSION_KEY, email);
+  authShowMsg('registerMsg','Akun berhasil dibuat! Mengarahkan ke aplikasi…','ok');
+  logEvent('user_registered', {email, mode:'lokal'});
+  submitBtn.disabled = false; submitBtn.textContent = 'Daftar Akun';
+  setTimeout(()=> authEnterApp(newUser), 600);
+});
+
+// ---- LOGIN ----
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  authClearMsg('loginMsg');
+  const idRaw = document.getElementById('loginIdentifier').value.trim();
+  const pass = document.getElementById('loginPassword').value;
+  if(!idRaw || !pass){
+    authShowMsg('loginMsg','Mohon isi email/no HP dan sandi.'); return;
+  }
+
+  const submitBtn = e.target.querySelector('.auth-submit');
+  submitBtn.disabled = true; submitBtn.textContent = 'Memproses…';
+
+  if(fbActive()){
+    try{
+      let email = idRaw.toLowerCase();
+      if(!idRaw.includes('@')){
+        // login pakai No HP/WA -> cari email terkait lewat Firestore
+        const phone = authNormalizePhone(idRaw);
+        if(phone.length < 8){
+          authShowMsg('loginMsg','Masukkan email yang valid, atau No HP/WA yang benar (contoh: 081234567890).');
+          submitBtn.disabled=false; submitBtn.textContent='Masuk'; return;
+        }
+        const doc = await firebase.firestore().collection('phoneIndex').doc(phone).get();
+        if(!doc.exists){
+          authShowMsg('loginMsg','Akun tidak ditemukan. Periksa No HP atau daftar dulu.');
+          submitBtn.disabled=false; submitBtn.textContent='Masuk'; return;
+        }
+        email = doc.data().email;
+      }
+      const cred = await firebase.auth().signInWithEmailAndPassword(email, pass);
+      let profile = {name:cred.user.displayName || email, email, phone:''};
+      try{
+        const snap = await firebase.firestore().collection('users').doc(cred.user.uid).get();
+        if(snap.exists) profile = Object.assign(profile, snap.data());
+      }catch(e){}
+      authShowMsg('loginMsg','Berhasil masuk!','ok');
+      setTimeout(()=> authEnterApp(profile), 300);
+    }catch(err){
+      authShowMsg('loginMsg', fbErrorMsg(err));
+    }finally{
+      submitBtn.disabled = false; submitBtn.textContent = 'Masuk';
+    }
+    return;
+  }
+
+  // ---- fallback lokal ----
+  const idLower = idRaw.toLowerCase();
+  const idPhone = authNormalizePhone(idRaw);
+  const users = authGetUsers();
+  const user = users.find(u => u.email===idLower || (idPhone.length>=9 && u.phone===idPhone));
+  if(!user){
+    authShowMsg('loginMsg','Akun tidak ditemukan. Periksa email/No HP atau daftar dulu.');
+    submitBtn.disabled=false; submitBtn.textContent='Masuk'; return;
+  }
+  const passHash = await authHash(pass);
+  if(passHash !== user.passHash){
+    authShowMsg('loginMsg','Sandi salah. Coba lagi.');
+    submitBtn.disabled=false; submitBtn.textContent='Masuk'; return;
+  }
+  localStorage.setItem(AUTH_SESSION_KEY, user.email);
+  authShowMsg('loginMsg','Berhasil masuk!','ok');
+  submitBtn.disabled=false; submitBtn.textContent='Masuk';
+  setTimeout(()=> authEnterApp(user), 300);
+});
+
+// ---- LOGOUT ----
+document.getElementById('logoutBtn').addEventListener('click', async ()=>{
+  if(!confirm('Keluar dari akun ini?')) return;
+  if(fbActive()){
+    try{ await firebase.auth().signOut(); }catch(e){}
+  }else{
+    localStorage.removeItem(AUTH_SESSION_KEY);
+  }
+  authSetLoggedInUI(null);
+  document.getElementById('appShell').classList.add('auth-locked');
+  document.getElementById('authScreen').classList.remove('hidden');
+  document.getElementById('loginForm').reset();
+  authSwitchTab('login');
+  logEvent('user_logged_out', {});
+});
+
+// ---- GANTI SANDI (tab Profil) ----
+const changePasswordBtn = document.getElementById('changePasswordBtn');
+if(changePasswordBtn) changePasswordBtn.addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('changePasswordStatus');
+  if(!fbActive() || !currentUserProfile || !currentUserProfile.email){
+    statusEl.textContent = 'Fitur ini butuh akun cloud (Firebase) aktif.';
+    statusEl.style.color = 'var(--rust)';
+    return;
+  }
+  changePasswordBtn.disabled = true;
+  try{
+    await firebase.auth().sendPasswordResetEmail(currentUserProfile.email);
+    statusEl.textContent = 'Link ganti sandi sudah dikirim ke '+currentUserProfile.email+'. Cek inbox/spam.';
+    statusEl.style.color = 'var(--ok)';
+    logEvent('change_password_requested');
+  }catch(err){
+    statusEl.textContent = fbErrorMsg(err);
+    statusEl.style.color = 'var(--rust)';
+  }finally{
+    changePasswordBtn.disabled = false;
+  }
+});
+
+// ---- LUPA SANDI ----
+document.getElementById('forgotPasswordLink').addEventListener('click', async ()=>{
+  const idRaw = document.getElementById('loginIdentifier').value.trim();
+  if(fbActive() && idRaw){
+    let email = idRaw.includes('@') ? idRaw.toLowerCase() : null;
+    if(!email){
+      try{
+        const phone = authNormalizePhone(idRaw);
+        const doc = await firebase.firestore().collection('phoneIndex').doc(phone).get();
+        if(doc.exists) email = doc.data().email;
+      }catch(e){}
+    }
+    if(email){
+      try{
+        await firebase.auth().sendPasswordResetEmail(email);
+        authShowMsg('loginMsg','Link reset sandi sudah dikirim ke email Anda. Cek inbox/spam.','ok');
+        return;
+      }catch(err){
+        authShowMsg('loginMsg', fbErrorMsg(err));
+        return;
+      }
+    }
+  }
+  // fallback: arahkan ke WhatsApp admin
+  const text = encodeURIComponent('Halo, saya lupa sandi akun RAB Cerdas saya. Mohon bantuan reset sandi.');
+  window.open('https://wa.me/6285263677768?text='+text, '_blank');
+});
+
+// ---- Cek sesi tersimpan saat aplikasi dibuka ----
+// (dipanggil di akhir file, setelah DEFAULT_APP_LOGO didefinisikan)
+function authInit(){
+  const authLogo = document.getElementById('authLogoImg');
+  if(authLogo) authLogo.src = (typeof DEFAULT_APP_LOGO!=='undefined') ? DEFAULT_APP_LOGO : '';
+
+  if(fbActive()){
+    firebase.auth().onAuthStateChanged(async (user)=>{
+      if(user){
+        let profile = {name:user.displayName || user.email, email:user.email, phone:''};
+        try{
+          const userRef = firebase.firestore().collection('users').doc(user.uid);
+          const snap = await userRef.get();
+          if(snap.exists){
+            profile = Object.assign(profile, snap.data());
+          }else{
+            // Dokumen belum ada — biasanya karena akun ini dibuat langsung dari
+            // Firebase Console (bukan lewat form Daftar di app). Buatkan otomatis
+            // supaya fitur simpan (branding/harga/proyek) tetap berfungsi.
+            await userRef.set({
+              name: profile.name, email: profile.email, phone: '',
+              createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+          }
+        }catch(e){}
+        authEnterApp(profile);
+      }
+      // jika user null: layar login tetap tampil (kondisi default)
+    });
+  }else{
+    const existing = authGetSessionUser();
+    if(existing) authEnterApp(existing);
+  }
+}
+
+// ---------- Nav ----------
+// ============================================================
+// LOGGING EVENT / ANALITIK (siap dihubungkan ke Firebase Analytics)
+// ============================================================
+// Cara menghubungkan ke data ASLI dari semua user (rekomendasi: Firebase, gratis):
+//   1. Buat project di https://console.firebase.google.com
+//   2. Tambahkan Firebase App + Analytics SDK di <head> file ini
+//      (ikuti panduan resmi "Add Firebase to your JavaScript app")
+//   3. Baris firebase.analytics().logEvent(...) di bawah akan otomatis aktif
+//      dan datanya akan muncul di Firebase Console — dari SEMUA user, semua device.
+// Tanpa Firebase, event tetap dicatat LOKAL di device ini saja (lihat tab Info > Log Aktivitas).
+// ============================================================
+let activityLog = [];
+function logEvent(name, params={}){
+  try{
+    if(typeof firebase !== 'undefined' && firebase.analytics){
+      firebase.analytics().logEvent(name, params);
+    }
+  }catch(e){ /* Firebase belum terpasang, lanjut ke pencatatan lokal */ }
+  try{
+    activityLog.unshift({name, params, time: new Date().toLocaleString('id-ID')});
+    if(activityLog.length>50) activityLog.pop();
+    if(typeof renderActivityLog==='function') renderActivityLog();
+  }catch(e){}
+}
+
+// ---------- NAVIGASI TAB: model gulir (swipe kiri/kanan), sinkron dengan nav ----------
+const mainEl = document.querySelector('main');
+const navEl = document.querySelector('nav');
+const tabSections = Array.from(document.querySelectorAll('main > section'));
+const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+const tabOrder = tabButtons.map(b=>b.dataset.tab);
+
+function currentTabIndex(){
+  if(!mainEl.clientWidth) return 0;
+  return Math.round(mainEl.scrollLeft / mainEl.clientWidth);
+}
+function syncMainHeight(){
+  const active = tabSections[currentTabIndex()];
+  if(active) mainEl.style.height = active.scrollHeight + 'px';
+}
+function syncActiveNavButton(){
+  const idx = currentTabIndex();
+  tabButtons.forEach((b,i)=>b.classList.toggle('active', i===idx));
+  const activeBtn = tabButtons[idx];
+  if(activeBtn && navEl){
+    const target = activeBtn.offsetLeft - (navEl.clientWidth - activeBtn.clientWidth)/2;
+    navEl.scrollTo({left: Math.max(0,target), behavior:'smooth'});
+  }
+}
+// Pindah ke tab tertentu secara terprogram (dipakai tombol nav & beberapa alur otomatis)
+function goToTab(tabName){
+  const idx = tabOrder.indexOf(tabName);
+  if(idx<0 || !mainEl.clientWidth) return;
+  mainEl.scrollTo({left: idx*mainEl.clientWidth, behavior:'smooth'});
+}
+tabButtons.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    goToTab(btn.dataset.tab);
+    logEvent('tab_view', {tab: btn.dataset.tab});
+  });
+});
+let scrollSettleTimer = null;
+mainEl.addEventListener('scroll', ()=>{
+  syncMainHeight();
+  syncActiveNavButton();
+  clearTimeout(scrollSettleTimer);
+  scrollSettleTimer = setTimeout(syncMainHeight, 120);
+});
+window.addEventListener('resize', syncMainHeight);
+if(typeof ResizeObserver !== 'undefined'){
+  const ro = new ResizeObserver(()=>syncMainHeight());
+  tabSections.forEach(s=>ro.observe(s));
+}
+syncMainHeight();
+syncActiveNavButton();
+
+function rupiah(n){
+  if(isNaN(n)) n=0;
+  return 'Rp ' + Math.round(n).toLocaleString('id-ID');
+}
+
+// ---------- RAB ----------
+const rabBody = document.getElementById('rabBody');
+const CATS = ['Pekerjaan Persiapan','Pekerjaan Struktur','Pekerjaan Dinding','Pekerjaan Lantai','Pekerjaan Plafon','Pekerjaan Interior','Pekerjaan MEP','Finishing','Lain-lain'];
+
+const TRIAL_MAX_ITEMS = Infinity;
+function addRabRow(data){
+  data = data || {};
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td>
+      <select class="tahap">
+        <option value="auto" ${(!data.tahap||data.tahap==='auto')?'selected':''}>Otomatis</option>
+        <option value="Desain" ${data.tahap==='Desain'?'selected':''}>Desain</option>
+        <option value="Produksi" ${data.tahap==='Produksi'?'selected':''}>Produksi</option>
+        <option value="Instalasi" ${data.tahap==='Instalasi'?'selected':''}>Instalasi</option>
+        <option value="Finishing" ${data.tahap==='Finishing'?'selected':''}>Finishing</option>
+      </select>
+    </td>
+    <td><input type="text" class="ruangan" list="ruanganList" placeholder="Dapur" value="${data.ruangan||''}"></td>
+    <td><input type="text" class="uraian" placeholder="Uraian pekerjaan" value="${data.uraian||''}"></td>
+    <td><input type="number" class="vol" value="${data.vol||1}" min="0" step="0.01"></td>
+    <td><input type="text" class="satuan" placeholder="m2" value="${data.satuan||'m2'}"></td>
+    <td><input type="number" class="harga" value="${data.harga||0}" min="0"></td>
+    <td class="jumlah" style="font-weight:700;">Rp 0</td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+  tr.querySelectorAll('input').forEach(inp=>inp.addEventListener('input', calcRab));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcRab(); logEvent('rab_item_removed'); });
+  rabBody.appendChild(tr);
+  calcRab();
+  logEvent('rab_item_added', {uraian: data.uraian||''});
+}
+
+function detectTahap(uraian){
+  const u = (uraian||'').toLowerCase();
+  if(/desain|gambar kerja|sketsa|survei|konsultasi/.test(u)) return 'Desain';
+  if(/pasang|instalasi|pemasangan/.test(u)) return 'Instalasi';
+  if(/finishing|cat ulang|poles|touch/.test(u)) return 'Finishing';
+  return 'Produksi';
+}
+function calcRab(){
+  let subtotal = 0;
+  const perRuangan = {};
+  const perTahap = {};
+  rabBody.querySelectorAll('tr').forEach(tr=>{
+    const vol = parseFloat(tr.querySelector('.vol').value)||0;
+    const harga = parseFloat(tr.querySelector('.harga').value)||0;
+    const jumlah = vol*harga;
+    tr.querySelector('.jumlah').textContent = rupiah(jumlah);
+    subtotal += jumlah;
+    const ruangan = tr.querySelector('.ruangan').value.trim() || 'Belum diisi';
+    perRuangan[ruangan] = (perRuangan[ruangan]||0) + jumlah;
+    const tahapSel = tr.querySelector('.tahap').value;
+    const uraianVal = tr.querySelector('.uraian').value;
+    const tahap = tahapSel==='auto' ? detectTahap(uraianVal) : tahapSel;
+    perTahap[tahap] = (perTahap[tahap]||0) + jumlah;
+  });
+  const rekapEl = document.getElementById('rekapRuangan');
+  if(rekapEl){
+    const entries = Object.entries(perRuangan);
+    rekapEl.innerHTML = entries.length ? entries.map(([r,v])=>
+      `<div class="line"><span>${r}</span><span>${rupiah(v)}</span></div>`
+    ).join('') : '<div class="line"><span>—</span><span>Belum ada item</span></div>';
+  }
+  const rekapTahapEl = document.getElementById('rekapTahap');
+  if(rekapTahapEl){
+    const order = ['Desain','Produksi','Instalasi','Finishing'];
+    const entries = Object.entries(perTahap).sort((a,b)=>order.indexOf(a[0])-order.indexOf(b[0]));
+    rekapTahapEl.innerHTML = entries.length ? entries.map(([t,v])=>
+      `<div class="line"><span>${t}</span><span>${rupiah(v)}</span></div>`
+    ).join('') : '<div class="line"><span>—</span><span>Belum ada item</span></div>';
+  }
+  const ppnPct = parseFloat(document.getElementById('ppnPct').value)||0;
+  const miscPct = parseFloat(document.getElementById('miscPct').value)||0;
+  const ppnAmt = subtotal*ppnPct/100;
+  const miscAmt = subtotal*miscPct/100;
+  document.getElementById('subtotal').textContent = rupiah(subtotal);
+  document.getElementById('ppnAmt').textContent = rupiah(ppnAmt);
+  document.getElementById('miscAmt').textContent = rupiah(miscAmt);
+  document.getElementById('grandTotal').textContent = rupiah(subtotal+ppnAmt+miscAmt);
+  if(typeof updateTerminAmounts==='function') updateTerminAmounts();
+}
+document.getElementById('addRow').addEventListener('click', ()=>addRabRow());
+document.getElementById('ppnPct').addEventListener('input', calcRab);
+document.getElementById('miscPct').addEventListener('input', calcRab);
+const exportRabBtn = document.getElementById('exportRab');
+if(exportRabBtn) exportRabBtn.addEventListener('click', ()=>{
+  let out = (brandName || 'RAB Interior') + '\n';
+  if(brandAddress) out += brandAddress + '\n';
+  out += 'RENCANA ANGGARAN BIAYA\n========================\n';
+  rabBody.querySelectorAll('tr').forEach(tr=>{
+    const r = tr.querySelector('.ruangan').value || '-';
+    const u = tr.querySelector('.uraian').value;
+    const v = tr.querySelector('.vol').value;
+    const s = tr.querySelector('.satuan').value;
+    const h = tr.querySelector('.harga').value;
+    const j = tr.querySelector('.jumlah').textContent;
+    out += `[${r}] ${u} | ${v} ${s} x Rp${h} = ${j}\n`;
+  });
+  out += '------------------------\n';
+  out += 'Subtotal: '+document.getElementById('subtotal').textContent+'\n';
+  out += 'PPN: '+document.getElementById('ppnAmt').textContent+'\n';
+  out += 'Lain-lain: '+document.getElementById('miscAmt').textContent+'\n';
+  out += 'TOTAL: '+document.getElementById('grandTotal').textContent+'\n';
+  const blob = new Blob([out], {type:'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'RAB.txt';
+  a.click();
+});
+
+// ---------- TERMIN PEMBAYARAN ----------
+function renderTerminRows(){
+  const n = parseInt(document.getElementById('terminJumlah').value)||3;
+  const body = document.getElementById('terminBody');
+  const presets = { 2:[60,40], 3:[50,30,20], 4:[40,30,20,10] };
+  const pcts = presets[n] || presets[3];
+  body.innerHTML = '';
+  for(let i=0;i<n;i++){
+    const labelText = i===n-1 ? 'Pelunasan' : (i===0 ? 'DP (Termin 1)' : `Termin ${i+1}`);
+    const row = document.createElement('div');
+    row.className = 'line';
+    row.innerHTML = `
+      <span>${labelText}
+        <input type="number" class="termin-pct" data-idx="${i}" value="${pcts[i]}" style="width:50px; display:inline-block; padding:2px 4px; margin-left:4px;">%
+      </span>
+      <span class="termin-amt" data-idx="${i}">Rp 0</span>
+    `;
+    body.appendChild(row);
+  }
+  body.querySelectorAll('.termin-pct').forEach(inp=>inp.addEventListener('input', updateTerminAmounts));
+  updateTerminAmounts();
+}
+function updateTerminAmounts(){
+  const body = document.getElementById('terminBody');
+  if(!body) return;
+  const grandTotalEl = document.getElementById('grandTotal');
+  const grandTotal = grandTotalEl ? (parseFloat(grandTotalEl.textContent.replace(/[^0-9]/g,''))||0) : 0;
+  let totalPct = 0;
+  body.querySelectorAll('.termin-pct').forEach(inp=>{
+    const pct = parseFloat(inp.value)||0;
+    totalPct += pct;
+    const amtEl = body.querySelector(`.termin-amt[data-idx="${inp.dataset.idx}"]`);
+    if(amtEl) amtEl.textContent = rupiah(grandTotal*pct/100);
+  });
+  const warnEl = document.getElementById('terminWarning');
+  if(warnEl) warnEl.textContent = Math.abs(totalPct-100)>0.5 ? `Total persentase ${totalPct}% — sebaiknya 100%.` : '';
+}
+document.getElementById('terminJumlah').addEventListener('change', renderTerminRows);
+renderTerminRows();
+
+// ---------- CETAK / PDF ----------
+function buildPrintArea(){
+  const proyek = document.getElementById('piProyek').value || 'Proyek Interior';
+  const klien = document.getElementById('piKlien').value || '-';
+  const alamat = document.getElementById('piAlamat').value || '-';
+  const tanggal = document.getElementById('piTanggal').value || '-';
+  const volumeProyek = document.getElementById('piVolume').value;
+  let rows = '';
+  rabBody.querySelectorAll('tr').forEach(tr=>{
+    const r = tr.querySelector('.ruangan').value || '-';
+    const u = tr.querySelector('.uraian').value;
+    const v = tr.querySelector('.vol').value;
+    const s = tr.querySelector('.satuan').value;
+    const h = parseFloat(tr.querySelector('.harga').value)||0;
+    const j = tr.querySelector('.jumlah').textContent;
+    rows += `<tr><td>${r}</td><td>${u}</td><td>${v} ${s}</td><td>${rupiah(h)}</td><td>${j}</td></tr>`;
+  });
+  let terminRows = '';
+  document.querySelectorAll('#terminBody .line').forEach(line=>{
+    const label = line.querySelector('span').childNodes[0].textContent.trim();
+    const amt = line.querySelector('.termin-amt').textContent;
+    terminRows += `<tr><td>${label}</td><td>${amt}</td></tr>`;
+  });
+  const brandHeader = brandLogo
+    ? `<img src="${brandLogo}" style="max-height:50px; max-width:160px; display:block; margin-bottom:6px;">`
+    : '';
+  const brandTitle = brandName || 'RAB Interior';
+  const brandAddrLine = brandAddress ? `<div style="font-size:10px; color:#777; margin-bottom:2px;">${brandAddress}</div>` : '';
+  document.getElementById('printArea').innerHTML = `
+    ${brandHeader}
+    <div style="font-size:11px; color:#555; margin-bottom:2px;">${brandTitle}</div>
+    ${brandAddrLine}
+    <div style="font-size:10px; color:#777; margin-bottom:8px;">No. ${nomorInvoiceOtomatis()} &nbsp;|&nbsp; Dicetak: ${tanggalIndonesia(new Date())}</div>
+    <h1>${proyek}</h1>
+    <div class="pmeta">Klien: ${klien} &nbsp;|&nbsp; Lokasi: ${alamat} &nbsp;|&nbsp; Tanggal Proyek: ${tanggal}${volumeProyek ? ` &nbsp;|&nbsp; Luas Proyek: ${volumeProyek} m²` : ''}</div>
+    <table>
+      <thead><tr><th>Ruangan</th><th>Uraian</th><th>Vol</th><th>Harga Satuan</th><th>Jumlah</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    <div class="ptotal">TOTAL RAB: ${document.getElementById('grandTotal').textContent}</div>
+    <table>
+      <thead><tr><th>Skema Pembayaran</th><th>Jumlah</th></tr></thead>
+      <tbody>${terminRows}</tbody>
+    </table>
+    <div class="psign"><div>Klien</div><div>Pelaksana</div></div>
+  `;
+}
+const printRabBtn = document.getElementById('printRab');
+if(printRabBtn) printRabBtn.addEventListener('click', ()=>{
+  buildPrintArea();
+  logEvent('print_rab');
+  setTimeout(()=>window.print(), 100);
+});
+const shareWaBtn = document.getElementById('shareWa');
+if(shareWaBtn) shareWaBtn.addEventListener('click', ()=>{
+  const proyek = document.getElementById('piProyek').value || 'Proyek Interior';
+  let out = `*RAB — ${proyek}*\n`;
+  rabBody.querySelectorAll('tr').forEach(tr=>{
+    const r = tr.querySelector('.ruangan').value || '-';
+    const u = tr.querySelector('.uraian').value;
+    const v = tr.querySelector('.vol').value;
+    const s = tr.querySelector('.satuan').value;
+    const j = tr.querySelector('.jumlah').textContent;
+    out += `[${r}] ${u} — ${v} ${s} = ${j}\n`;
+  });
+  out += `\n*TOTAL RAB: ${document.getElementById('grandTotal').textContent}*`;
+  const waUrl = `https://wa.me/?text=${encodeURIComponent(out)}`;
+  logEvent('share_wa_rab');
+  window.open(waUrl, '_blank');
+});
+
+// ---------- SIMPAN / MUAT PROYEK ----------
+function collectProjectData(){
+  const items = [];
+  rabBody.querySelectorAll('tr').forEach(tr=>{
+    items.push({
+      tahap: tr.querySelector('.tahap').value,
+      ruangan: tr.querySelector('.ruangan').value,
+      uraian: tr.querySelector('.uraian').value,
+      vol: parseFloat(tr.querySelector('.vol').value)||0,
+      satuan: tr.querySelector('.satuan').value,
+      harga: parseFloat(tr.querySelector('.harga').value)||0,
+    });
+  });
+  return {
+    proyek: document.getElementById('piProyek').value,
+    klien: document.getElementById('piKlien').value,
+    alamat: document.getElementById('piAlamat').value,
+    tanggal: document.getElementById('piTanggal').value,
+    volumeProyek: document.getElementById('piVolume').value,
+    items,
+    ppnPct: document.getElementById('ppnPct').value,
+    miscPct: document.getElementById('miscPct').value,
+    bahanMulti: {
+      multiplek: collectSheetRows('#mpBody','mp-jenis','mp-luas','mp-waste'),
+      hpl: collectSheetRows('#hplBody','hpl-jenis','hpl-luas','hpl-waste'),
+      plafon: collectSheetRows('#plfBody','plf-jenis','plf-luas','plf-waste'),
+      partisi: collectSheetRows('#partisiBody','partisi-jenis','partisi-luas','partisi-waste'),
+      dinding: collectSheetRows('#dindingBody','dinding-jenis','dinding-luas','dinding-waste'),
+      lantai: (function(){
+        const rows = [];
+        document.querySelectorAll('#lantaiBody tr').forEach(tr=>{
+          rows.push({
+            jenis: tr.querySelector('.lantai-jenis').value,
+            luas: parseFloat(tr.querySelector('.lantai-luas').value)||0,
+            dus: parseFloat(tr.querySelector('.lantai-dus').value)||0,
+            waste: parseFloat(tr.querySelector('.lantai-waste').value)||0,
+          });
+        });
+        return rows;
+      })(),
+      cat: (function(){
+        const rows = [];
+        document.querySelectorAll('#catBody tr').forEach(tr=>{
+          rows.push({
+            jenis: tr.querySelector('.cat-jenis').value,
+            luas: parseFloat(tr.querySelector('.cat-luas').value)||0,
+            daya: parseFloat(tr.querySelector('.cat-daya').value)||0,
+            lapis: parseFloat(tr.querySelector('.cat-lapis').value)||0,
+          });
+        });
+        return rows;
+      })(),
+      engsel: (function(){
+        const rows = [];
+        document.querySelectorAll('#engselBody tr').forEach(tr=>{
+          rows.push({ jenis: tr.querySelector('.engsel-jenis').value, jumlah: parseFloat(tr.querySelector('.engsel-jumlah').value)||0 });
+        });
+        return rows;
+      })(),
+      rellaci: (function(){
+        const rows = [];
+        document.querySelectorAll('#relLaciBody tr').forEach(tr=>{
+          rows.push({
+            jenis: tr.querySelector('.rellaci-jenis').value,
+            ukuran: tr.querySelector('.rellaci-ukuran').value,
+            jumlah: parseFloat(tr.querySelector('.rellaci-jumlah').value)||0,
+          });
+        });
+        return rows;
+      })(),
+      handle: (function(){
+        const rows = [];
+        document.querySelectorAll('#handleBody tr').forEach(tr=>{
+          rows.push({
+            jenis: tr.querySelector('.handle-jenis').value,
+            ukuran: tr.querySelector('.handle-ukuran').value,
+            jumlah: parseFloat(tr.querySelector('.handle-jumlah').value)||0,
+          });
+        });
+        return rows;
+      })(),
+      lampu: (function(){
+        const rows = [];
+        document.querySelectorAll('#lampuBody tr').forEach(tr=>{
+          rows.push({ jenis: tr.querySelector('.lampu-jenis').value, jumlah: parseFloat(tr.querySelector('.lampu-jumlah').value)||0 });
+        });
+        return rows;
+      })(),
+      rangka: (function(){
+        const rows = [];
+        document.querySelectorAll('#rangkaBody tr').forEach(tr=>{
+          rows.push({
+            jenis: tr.querySelector('.rangka-jenis').value,
+            luas: parseFloat(tr.querySelector('.rangka-luas').value)||0,
+            jarak: parseFloat(tr.querySelector('.rangka-jarak').value)||0,
+            panjangBatang: parseFloat(tr.querySelector('.rangka-panjang').value)||0,
+            waste: parseFloat(tr.querySelector('.rangka-waste').value)||0,
+          });
+        });
+        return rows;
+      })(),
+    },
+  };
+}
+function clearAllRabRows(){ rabBody.innerHTML = ''; }
+function applyProjectData(data){
+  document.getElementById('piProyek').value = data.proyek || '';
+  document.getElementById('piKlien').value = data.klien || '';
+  document.getElementById('piAlamat').value = data.alamat || '';
+  document.getElementById('piTanggal').value = data.tanggal || '';
+  document.getElementById('piVolume').value = data.volumeProyek || '';
+  document.getElementById('ppnPct').value = (data.ppnPct===undefined||data.ppnPct===null||data.ppnPct==='') ? 11 : data.ppnPct;
+  document.getElementById('miscPct').value = (data.miscPct===undefined||data.miscPct===null||data.miscPct==='') ? 0 : data.miscPct;
+  clearAllRabRows();
+  (data.items||[]).forEach(it=>addRabRow(it));
+  if(data.bahanMulti){
+    if(Array.isArray(data.bahanMulti.multiplek) && data.bahanMulti.multiplek.length){
+      document.getElementById('mpBody').innerHTML = '';
+      data.bahanMulti.multiplek.forEach(r=>addMpRow(r.jenis, r.luas, r.waste));
+      calcMultiplek();
+    }
+    if(Array.isArray(data.bahanMulti.hpl) && data.bahanMulti.hpl.length){
+      document.getElementById('hplBody').innerHTML = '';
+      data.bahanMulti.hpl.forEach(r=>addHplRow(r.jenis, r.luas, r.waste));
+      calcHpl();
+    }
+    if(Array.isArray(data.bahanMulti.plafon) && data.bahanMulti.plafon.length){
+      document.getElementById('plfBody').innerHTML = '';
+      data.bahanMulti.plafon.forEach(r=>addPlfRow(r.jenis, r.luas, r.waste));
+      calcPlafon();
+    }
+    if(Array.isArray(data.bahanMulti.partisi) && data.bahanMulti.partisi.length){
+      document.getElementById('partisiBody').innerHTML = '';
+      data.bahanMulti.partisi.forEach(r=>addPartisiRow(r.jenis, r.luas, r.waste));
+    }
+    if(Array.isArray(data.bahanMulti.dinding) && data.bahanMulti.dinding.length){
+      document.getElementById('dindingBody').innerHTML = '';
+      data.bahanMulti.dinding.forEach(r=>addDindingRow(r.jenis, r.luas, r.waste));
+    }
+    if(data.bahanMulti.partisi || data.bahanMulti.dinding) recalcDindingPartisiGabungan();
+    if(Array.isArray(data.bahanMulti.lantai) && data.bahanMulti.lantai.length){
+      document.getElementById('lantaiBody').innerHTML = '';
+      data.bahanMulti.lantai.forEach(r=>addLantaiRow(r.jenis, r.luas, r.dus, r.waste));
+      calcLantai();
+    }
+    if(Array.isArray(data.bahanMulti.cat) && data.bahanMulti.cat.length){
+      document.getElementById('catBody').innerHTML = '';
+      data.bahanMulti.cat.forEach(r=>addCatRow(r.jenis, r.luas, r.daya, r.lapis));
+      calcCat();
+    }
+    if(Array.isArray(data.bahanMulti.engsel) && data.bahanMulti.engsel.length){
+      document.getElementById('engselBody').innerHTML = '';
+      data.bahanMulti.engsel.forEach(r=>addEngselRow(r.jenis, r.jumlah));
+    }
+    if(Array.isArray(data.bahanMulti.rellaci) && data.bahanMulti.rellaci.length){
+      document.getElementById('relLaciBody').innerHTML = '';
+      data.bahanMulti.rellaci.forEach(r=>addRelLaciRow(r.jenis, r.ukuran, r.jumlah));
+    }
+    if(Array.isArray(data.bahanMulti.handle) && data.bahanMulti.handle.length){
+      document.getElementById('handleBody').innerHTML = '';
+      data.bahanMulti.handle.forEach(r=>addHandleRow(r.jenis, r.ukuran, r.jumlah));
+    }
+    if(data.bahanMulti.engsel || data.bahanMulti.rellaci || data.bahanMulti.handle) calcAksesoris();
+    if(Array.isArray(data.bahanMulti.lampu) && data.bahanMulti.lampu.length){
+      document.getElementById('lampuBody').innerHTML = '';
+      data.bahanMulti.lampu.forEach(r=>addLampuRow(r.jenis, r.jumlah));
+      calcLampu();
+    }
+    if(Array.isArray(data.bahanMulti.rangka) && data.bahanMulti.rangka.length){
+      document.getElementById('rangkaBody').innerHTML = '';
+      data.bahanMulti.rangka.forEach(r=>addRangkaRow(r.jenis, r.luas, r.jarak, r.panjangBatang, r.waste));
+      calcHollow();
+    }
+  }
+}
+
+const saveProjectBtn = document.getElementById('saveProject');
+if(saveProjectBtn) saveProjectBtn.addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('projectStatus');
+  try{
+    await cloudSaveField('projectData', collectProjectData());
+    statusEl.textContent = 'Proyek berhasil disimpan permanen ke akun Anda.';
+    statusEl.style.color = 'var(--ok)';
+    logEvent('project_saved');
+  }catch(e){
+    statusEl.textContent = 'Gagal menyimpan proyek. Pastikan Anda sedang login lalu coba lagi.';
+    statusEl.style.color = 'var(--rust)';
+  }
+});
+document.getElementById('loadProject').addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('projectStatus');
+  try{
+    const saved = await cloudLoadField('projectData');
+    if(saved){
+      applyProjectData(saved);
+      statusEl.textContent = 'Proyek berhasil dimuat.';
+      statusEl.style.color = 'var(--ok)';
+      logEvent('project_loaded');
+      return;
+    }
+    statusEl.textContent = 'Belum ada proyek tersimpan.';
+    statusEl.style.color = 'var(--steel)';
+  }catch(e){
+    statusEl.textContent = 'Gagal memuat proyek.';
+    statusEl.style.color = '#b33';
+  }
+});
+async function autoLoadProjectOnStart(){
+  try{
+    const saved = await cloudLoadField('projectData');
+    if(saved){ applyProjectData(saved); }
+  }catch(e){ /* belum ada proyek tersimpan, tetap pakai contoh bawaan */ }
+}
+// Tabel RAB sengaja dibiarkan kosong saat pertama dibuka — user mengisi item
+// dan harga sendiri (tidak ada lagi baris contoh dengan angka bawaan).
+
+// ---------- BRANDING USAHA (logo & nama) ----------
+const DEFAULT_APP_LOGO = "data:image/png;base64,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"; // logo bawaan RAB Cerdas
+let brandName = '';
+let brandAddress = '';
+let brandLogo = null; // data URL milik usaha sendiri (null = pakai logo bawaan aplikasi)
+
+// Perkecil & kompres foto logo sebelum disimpan (supaya ukuran data hemat & cepat diunggah)
+function compressLogoFile(file, maxDim, quality){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = ()=>{
+      const img = new Image();
+      img.onload = ()=>{
+        let w = img.width, h = img.height;
+        if(w > maxDim || h > maxDim){
+          if(w > h){ h = Math.round(h * maxDim / w); w = maxDim; }
+          else{ w = Math.round(w * maxDim / h); h = maxDim; }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.onerror = reject;
+      img.src = reader.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+// ---------- PENYIMPANAN CLOUD (Firestore) ----------
+async function cloudSaveField(field, value){
+  if(!fbActive()) throw new Error('firebase-inactive');
+  const user = firebase.auth().currentUser;
+  if(!user) throw new Error('not-signed-in');
+  await firebase.firestore().collection('users').doc(user.uid).set({[field]: value}, {merge:true});
+}
+async function cloudLoadField(field){
+  if(!fbActive()) return null;
+  const user = firebase.auth().currentUser;
+  if(!user) return null;
+  const snap = await firebase.firestore().collection('users').doc(user.uid).get();
+  if(!snap.exists) return null;
+  const data = snap.data();
+  return (data && data[field] !== undefined) ? data[field] : null;
+}
+
+function applyBranding(){
+  const eyebrowEl = document.getElementById('brandEyebrow');
+  const logoEl = document.getElementById('brandLogoImg');
+  if(eyebrowEl) eyebrowEl.textContent = brandName || 'Alat Bantu Tukang Interior';
+  if(logoEl){
+    logoEl.src = brandLogo || DEFAULT_APP_LOGO;
+    logoEl.style.display = 'block';
+  }
+}
+
+document.getElementById('brandNameInput').addEventListener('input', e=>{
+  brandName = e.target.value;
+  applyBranding();
+});
+document.getElementById('brandAddressInput').addEventListener('input', e=>{
+  brandAddress = e.target.value;
+});
+document.getElementById('brandLogoInput').addEventListener('change', async e=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById('brandStatus');
+  try{
+    brandLogo = await compressLogoFile(file, 300, 0.72);
+    applyBranding();
+  }catch(err){
+    statusEl.textContent = 'Gagal memproses gambar logo. Coba file lain.';
+    statusEl.style.color = 'var(--rust)';
+  }
+});
+document.getElementById('resetBrand').addEventListener('click', ()=>{
+  brandName = '';
+  brandAddress = '';
+  brandLogo = null;
+  document.getElementById('brandNameInput').value = '';
+  document.getElementById('brandAddressInput').value = '';
+  document.getElementById('brandLogoInput').value = '';
+  applyBranding();
+  const statusEl = document.getElementById('brandStatus');
+  statusEl.textContent = 'Direset ke logo & nama bawaan RAB Cerdas.';
+  statusEl.style.color = 'var(--steel)';
+});
+const saveBrandBtn = document.getElementById('saveBrand');
+if(saveBrandBtn) saveBrandBtn.addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('brandStatus');
+  try{
+    await cloudSaveField('branding', {name:brandName, address:brandAddress, logo:brandLogo});
+    statusEl.textContent = 'Branding berhasil disimpan permanen ke akun Anda.';
+    statusEl.style.color = 'var(--ok)';
+    logEvent('brand_saved');
+  }catch(e){
+    statusEl.textContent = 'Gagal menyimpan branding. Pastikan Anda sedang login lalu coba lagi.';
+    statusEl.style.color = 'var(--rust)';
+  }
+});
+async function loadBranding(){
+  try{
+    const saved = await cloudLoadField('branding');
+    if(saved){
+      brandName = saved.name || '';
+      brandAddress = saved.address || '';
+      brandLogo = saved.logo || null;
+      document.getElementById('brandNameInput').value = brandName;
+      document.getElementById('brandAddressInput').value = brandAddress;
+    }
+  }catch(e){ /* belum ada branding tersimpan */ }
+  applyBranding();
+}
+// dipanggil dari authEnterApp() setelah login, bukan di sini (currentUser masih kosong saat script pertama kali jalan)
+
+// ---------- SISTEM PENANGGALAN OTOMATIS ----------
+(function autoSetTodayDate(){
+  const tanggalInput = document.getElementById('piTanggal');
+  if(tanggalInput && !tanggalInput.value){
+    tanggalInput.valueAsDate = new Date();
+  }
+})();
+function tanggalIndonesia(d){
+  return d.toLocaleDateString('id-ID', {day:'numeric', month:'long', year:'numeric'});
+}
+function nomorInvoiceOtomatis(){
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth()+1).padStart(2,'0');
+  const d = String(now.getDate()).padStart(2,'0');
+  const hh = String(now.getHours()).padStart(2,'0');
+  const mm = String(now.getMinutes()).padStart(2,'0');
+  return `INV/${y}${m}${d}/${hh}${mm}`;
+}
+
+// ---------- HARGA MATERIAL & ESTIMASI (data inti) ----------
+const DEFAULT_PRICES = {
+  multiplek18: {label:'Multiplek 18mm', unit:'lembar', price:0},
+  multiplek15: {label:'Multiplek 15mm', unit:'lembar', price:0},
+  mdf18: {label:'MDF 18mm', unit:'lembar', price:0},
+  blockboard18: {label:'Blockboard 18mm', unit:'lembar', price:0},
+  hpl: {label:'HPL Finishing (Seri Standar)', unit:'lembar', price:0},
+  plafon_gypsum: {label:'Plafon Gypsum', unit:'lembar', price:0},
+  plafon_pvc: {label:'Plafon PVC', unit:'lembar', price:0},
+  plafon_wpc: {label:'Plafon WPC', unit:'lembar', price:0},
+  plafon_wallboard: {label:'Plafon Wallboard', unit:'lembar', price:0},
+  dp_wallboard: {label:'Wallboard', unit:'lembar', price:0},
+  dp_wpc: {label:'WPC', unit:'lembar', price:0},
+  dp_uvmarmer: {label:'UV Marmer', unit:'lembar', price:0},
+  dp_walfoam: {label:'Walfoam', unit:'lembar', price:0},
+  lantai_vinyl: {label:'Vinyl Lantai', unit:'dus', price:0},
+  lantai_spc: {label:'SPC Lantai', unit:'dus', price:0},
+  lantai_pvcdeck: {label:'PVC Deck', unit:'dus', price:0},
+  cat_tembok: {label:'Cat Tembok', unit:'liter', price:0},
+  cat_kusen: {label:'Cat Kusen', unit:'liter', price:0},
+  cat_pintujendela: {label:'Cat Pintu/Jendela', unit:'liter', price:0},
+  cat_duco: {label:'Cat Duco', unit:'liter', price:0},
+  engsel: {label:'Engsel Standar', unit:'pcs', price:0},
+  rellaci: {label:'Rel Laci Standar', unit:'pasang', price:0},
+  handle: {label:'Handle/Pegangan Standar', unit:'pcs', price:0},
+  lampu: {label:'Downlight', unit:'titik', price:0},
+  hollow: {label:'Besi Hollow', unit:'batang', price:0},
+  granit: {label:'Granit/Top Table', unit:'m2', price:0},
+};
+let materialPrices = JSON.parse(JSON.stringify(DEFAULT_PRICES));
+let materialQty = {};
+Object.keys(DEFAULT_PRICES).forEach(k=>{ materialQty[k]=0; });
+// Daftar key yang termasuk 1 kelompok "jenis/seri" untuk kalkulator multi-baris
+let MULTIPLEK_KEYS = ['multiplek18','multiplek15','mdf18','blockboard18'];
+let HPL_KEYS = ['hpl'];
+let PLAFON_KEYS = ['plafon_gypsum','plafon_pvc','plafon_wpc','plafon_wallboard'];
+// Partisi (sekat/dinding baru) & Dinding (finishing dinding existing) sengaja berbagi
+// SATU katalog bahan yang sama (Wallboard/WPC/UV Marmer/Walfoam) karena keduanya
+// memang memakai jenis panel yang sama — supaya user tidak perlu isi harga 2x untuk
+// bahan yang sama. Keduanya tetap kartu & tabel terpisah sesuai permintaan.
+let DINDING_PARTISI_KEYS = ['dp_wallboard','dp_wpc','dp_uvmarmer','dp_walfoam'];
+let LANTAI_KEYS = ['lantai_vinyl','lantai_spc','lantai_pvcdeck'];
+let CAT_KEYS = ['cat_tembok','cat_kusen','cat_pintujendela','cat_duco'];
+let ENGSEL_KEYS = ['engsel'];
+let RELLACI_KEYS = ['rellaci'];
+let HANDLE_KEYS = ['handle'];
+let LAMPU_KEYS = ['lampu'];
+let RANGKA_KEYS = ['hollow'];
+
+function slugKey(text){
+  return 'c_' + text.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'') + '_' + Math.random().toString(36).slice(2,6);
+}
+// Tambah jenis/seri material baru ke materialPrices + ke daftar kelompok terkait,
+// lalu refresh semua dropdown jenis yang sedang tampil di kelompok itu.
+// selectClasses boleh 1 nama class (string) atau beberapa sekaligus (array) —
+// dipakai saat 2 kartu berbeda berbagi satu katalog bahan yang sama (mis. Partisi & Dinding).
+function addJenisBaru(groupKeysArray, selectClasses, defaultUnit){
+  const label = prompt('Nama jenis/seri baru (contoh: Multiplek 9mm, HPL Motif Kayu Oak, dsb):');
+  if(!label || !label.trim()) return null;
+  const unit = prompt('Satuan (contoh: lembar):', defaultUnit || 'lembar') || defaultUnit || 'lembar';
+  const key = slugKey(label);
+  materialPrices[key] = {label: label.trim(), unit: unit.trim(), price: 0};
+  materialQty[key] = 0;
+  groupKeysArray.push(key);
+  (Array.isArray(selectClasses) ? selectClasses : [selectClasses]).forEach(cls=>refreshJenisSelects(groupKeysArray, cls));
+  renderHargaTable();
+  return key;
+}
+function refreshJenisSelects(groupKeysArray, selectClass){
+  document.querySelectorAll('select.'+selectClass).forEach(sel=>{
+    const current = sel.value;
+    sel.innerHTML = groupKeysArray.map(k=>`<option value="${k}">${materialPrices[k].label}</option>`).join('');
+    if(groupKeysArray.includes(current)) sel.value = current;
+  });
+}
+// Hitung total lembar per baris (rumus lembar standar 122x244cm) lalu agregasikan
+// ke materialQty per jenis — dipakai bareng oleh Multiplek/HPL/Plafon.
+function aggregateSheetRows(tbodySelector, jenisClass, luasClass, wasteClass, groupKeysArray){
+  const sums = {};
+  let totalLuasWaste = 0, totalLembar = 0;
+  document.querySelectorAll(tbodySelector+' tr').forEach(tr=>{
+    const jenisSel = tr.querySelector('.'+jenisClass);
+    const luasInp = tr.querySelector('.'+luasClass);
+    const wasteInp = tr.querySelector('.'+wasteClass);
+    if(!jenisSel || !luasInp || !wasteInp) return;
+    const jenis = jenisSel.value;
+    const luas = parseFloat(luasInp.value)||0;
+    const waste = parseFloat(wasteInp.value)||0;
+    const luasWaste = luas*(1+waste/100);
+    const lembar = Math.ceil(luasWaste/SHEET_AREA);
+    sums[jenis] = (sums[jenis]||0) + lembar;
+    totalLuasWaste += luasWaste;
+    totalLembar += lembar;
+  });
+  groupKeysArray.forEach(k=>{ materialQty[k] = 0; });
+  Object.entries(sums).forEach(([k,v])=>{ materialQty[k] = v; });
+  return {sums, totalLuasWaste, totalLembar};
+}
+
+// ---------- BAHAN: Multiplek/Plywood (multi-baris: bisa >1 jenis/ketebalan) ----------
+const SHEET_AREA = 1.22*2.44; // m2 per lembar standar
+
+function mpRowHtml(jenis, luas, waste){
+  return `
+    <td><select class="mp-jenis">${MULTIPLEK_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="mp-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="mp-waste" value="${waste!==undefined?waste:15}" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addMpRow(jenis, luas, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = mpRowHtml(jenis || MULTIPLEK_KEYS[0], luas, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcMultiplek));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcMultiplek(); });
+  document.getElementById('mpBody').appendChild(tr);
+}
+function calcMultiplek(){
+  const {sums, totalLuasWaste, totalLembar} = aggregateSheetRows('#mpBody', 'mp-jenis', 'mp-luas', 'mp-waste', MULTIPLEK_KEYS);
+  const resultEl = document.getElementById('mpResult');
+  if(totalLembar===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} lembar</b>`).join('<br>');
+    resultEl.innerHTML = `${rincian}<br>Total luas + waste: ${totalLuasWaste.toFixed(2)} m² (lembar standar 122x244cm)<br>Total kebutuhan: <span class="big">${totalLembar} lembar</span>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+document.getElementById('mpAddRow').addEventListener('click', ()=>{ addMpRow(); calcMultiplek(); });
+document.getElementById('mpAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(MULTIPLEK_KEYS, 'mp-jenis', 'lembar');
+  if(key){ addMpRow(key); calcMultiplek(); }
+});
+addMpRow('multiplek18', '', 15);
+calcMultiplek();
+
+// ---------- BAHAN: HPL (multi-baris: bisa >1 seri/motif) ----------
+function hplRowHtml(jenis, luas, waste){
+  return `
+    <td><select class="hpl-jenis">${HPL_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="hpl-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="hpl-waste" value="${waste!==undefined?waste:20}" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addHplRow(jenis, luas, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = hplRowHtml(jenis || HPL_KEYS[0], luas, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcHpl));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcHpl(); });
+  document.getElementById('hplBody').appendChild(tr);
+}
+function calcHpl(){
+  const {sums, totalLuasWaste, totalLembar} = aggregateSheetRows('#hplBody', 'hpl-jenis', 'hpl-luas', 'hpl-waste', HPL_KEYS);
+  const resultEl = document.getElementById('hplResult');
+  if(totalLembar===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} lembar</b>`).join('<br>');
+    resultEl.innerHTML = `${rincian}<br>Total luas + waste: ${totalLuasWaste.toFixed(2)} m²<br>Total kebutuhan: <span class="big">${totalLembar} lembar HPL</span> (122x244cm)`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+document.getElementById('hplAddRow').addEventListener('click', ()=>{ addHplRow(); calcHpl(); });
+document.getElementById('hplAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(HPL_KEYS, 'hpl-jenis', 'lembar');
+  if(key){ addHplRow(key); calcHpl(); }
+});
+addHplRow('hpl', '', 20);
+calcHpl();
+
+// ---------- BAHAN: Panel Plafon/Partisi (Gypsum/PVC/WPC/Wallboard, multi-baris) ----------
+function plfRowHtml(jenis, luas, waste){
+  return `
+    <td><select class="plf-jenis">${PLAFON_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="plf-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="plf-waste" value="${waste!==undefined?waste:10}" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addPlfRow(jenis, luas, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = plfRowHtml(jenis || PLAFON_KEYS[0], luas, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcPlafon));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcPlafon(); });
+  document.getElementById('plfBody').appendChild(tr);
+}
+function calcPlafon(){
+  const {sums, totalLuasWaste, totalLembar} = aggregateSheetRows('#plfBody', 'plf-jenis', 'plf-luas', 'plf-waste', PLAFON_KEYS);
+  const resultEl = document.getElementById('plfResult');
+  if(totalLembar===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} lembar</b>`).join('<br>');
+    resultEl.innerHTML = `${rincian}<br>Total luas + waste: ${totalLuasWaste.toFixed(2)} m²<br>Total kebutuhan: <span class="big">${totalLembar} lembar</span>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+document.getElementById('plfAddRow').addEventListener('click', ()=>{ addPlfRow(); calcPlafon(); });
+document.getElementById('plfAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(PLAFON_KEYS, 'plf-jenis', 'lembar');
+  if(key){ addPlfRow(key); calcPlafon(); }
+});
+addPlfRow('plafon_gypsum', '', 10);
+calcPlafon();
+
+// ---------- BAHAN: Partisi & Dinding (berbagi katalog DINDING_PARTISI_KEYS) ----------
+// Partisi dan Dinding adalah 2 tabel/kartu terpisah (sesuai pekerjaan yang beda),
+// tapi sama-sama menyumbang ke stok bahan yang SAMA (mis. "Wallboard" dari kartu
+// Partisi + "Wallboard" dari kartu Dinding harus terjumlah, bukan saling menimpa).
+// Karena itu materialQty untuk key-key ini SELALU dihitung ulang dari GABUNGAN
+// kedua tabel sekaligus, lewat satu fungsi bersama di bawah ini.
+function dpRowHtml(cls, jenis, luas, waste){
+  return `
+    <td><select class="${cls}-jenis">${DINDING_PARTISI_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="${cls}-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="${cls}-waste" value="${waste!==undefined?waste:10}" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function sumDindingPartisiTable(tbodySelector, jenisClass, luasClass, wasteClass){
+  const sums = {};
+  let totalLuasWaste = 0, totalLembar = 0;
+  document.querySelectorAll(tbodySelector+' tr').forEach(tr=>{
+    const jenis = tr.querySelector('.'+jenisClass).value;
+    const luas = parseFloat(tr.querySelector('.'+luasClass).value)||0;
+    const waste = parseFloat(tr.querySelector('.'+wasteClass).value)||0;
+    const luasWaste = luas*(1+waste/100);
+    const lembar = Math.ceil(luasWaste/SHEET_AREA);
+    sums[jenis] = (sums[jenis]||0) + lembar;
+    totalLuasWaste += luasWaste;
+    totalLembar += lembar;
+  });
+  return {sums, totalLuasWaste, totalLembar};
+}
+function recalcDindingPartisiGabungan(){
+  const partisi = sumDindingPartisiTable('#partisiBody', 'partisi-jenis', 'partisi-luas', 'partisi-waste');
+  const dinding = sumDindingPartisiTable('#dindingBody', 'dinding-jenis', 'dinding-luas', 'dinding-waste');
+  DINDING_PARTISI_KEYS.forEach(k=>{
+    materialQty[k] = (partisi.sums[k]||0) + (dinding.sums[k]||0);
+  });
+
+  const partisiEl = document.getElementById('partisiResult');
+  if(partisi.totalLembar===0){
+    partisiEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(partisi.sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} lembar</b>`).join('<br>');
+    partisiEl.innerHTML = `${rincian}<br>Total luas + waste: ${partisi.totalLuasWaste.toFixed(2)} m²<br>Total kebutuhan (kartu ini): <span class="big">${partisi.totalLembar} lembar</span>`;
+  }
+
+  const dindingEl = document.getElementById('dindingResult');
+  if(dinding.totalLembar===0){
+    dindingEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(dinding.sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} lembar</b>`).join('<br>');
+    dindingEl.innerHTML = `${rincian}<br>Total luas + waste: ${dinding.totalLuasWaste.toFixed(2)} m²<br>Total kebutuhan (kartu ini): <span class="big">${dinding.totalLembar} lembar</span>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+function addPartisiRow(jenis, luas, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = dpRowHtml('partisi', jenis || DINDING_PARTISI_KEYS[0], luas, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', recalcDindingPartisiGabungan));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); recalcDindingPartisiGabungan(); });
+  document.getElementById('partisiBody').appendChild(tr);
+}
+function addDindingRow(jenis, luas, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = dpRowHtml('dinding', jenis || DINDING_PARTISI_KEYS[0], luas, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', recalcDindingPartisiGabungan));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); recalcDindingPartisiGabungan(); });
+  document.getElementById('dindingBody').appendChild(tr);
+}
+document.getElementById('partisiAddRow').addEventListener('click', ()=>{ addPartisiRow(); recalcDindingPartisiGabungan(); });
+document.getElementById('partisiAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(DINDING_PARTISI_KEYS, ['partisi-jenis','dinding-jenis'], 'lembar');
+  if(key){ addPartisiRow(key); recalcDindingPartisiGabungan(); }
+});
+document.getElementById('dindingAddRow').addEventListener('click', ()=>{ addDindingRow(); recalcDindingPartisiGabungan(); });
+document.getElementById('dindingAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(DINDING_PARTISI_KEYS, ['partisi-jenis','dinding-jenis'], 'lembar');
+  if(key){ addDindingRow(key); recalcDindingPartisiGabungan(); }
+});
+addPartisiRow('dp_wallboard', '', 10);
+addDindingRow('dp_wallboard', '', 10);
+recalcDindingPartisiGabungan();
+
+// ---------- BAHAN: Lantai (Vinyl/SPC/PVC Deck, multi-baris, dihitung per dus) ----------
+function lantaiRowHtml(jenis, luas, dus, waste){
+  return `
+    <td><select class="lantai-jenis">${LANTAI_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="lantai-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="lantai-dus" value="${dus!==undefined?dus:2.2}" min="0" step="0.01"></td>
+    <td><input type="number" class="lantai-waste" value="${waste!==undefined?waste:8}" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addLantaiRow(jenis, luas, dus, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = lantaiRowHtml(jenis || LANTAI_KEYS[0], luas, dus, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcLantai));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcLantai(); });
+  document.getElementById('lantaiBody').appendChild(tr);
+}
+function calcLantai(){
+  const sums = {};
+  let totalDus = 0;
+  LANTAI_KEYS.forEach(k=>{ materialQty[k]=0; });
+  document.querySelectorAll('#lantaiBody tr').forEach(tr=>{
+    const jenis = tr.querySelector('.lantai-jenis').value;
+    const luas = parseFloat(tr.querySelector('.lantai-luas').value)||0;
+    const dus = parseFloat(tr.querySelector('.lantai-dus').value)||1;
+    const waste = parseFloat(tr.querySelector('.lantai-waste').value)||0;
+    const jmlDus = Math.ceil((luas*(1+waste/100))/dus);
+    sums[jenis] = (sums[jenis]||0) + jmlDus;
+    totalDus += jmlDus;
+  });
+  Object.entries(sums).forEach(([k,v])=>{ materialQty[k] = v; });
+  const resultEl = document.getElementById('lantaiResult');
+  if(totalDus===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} dus</b>`).join('<br>');
+    resultEl.innerHTML = `${rincian}<br>Total kebutuhan: <span class="big">${totalDus} dus</span>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+document.getElementById('lantaiAddRow').addEventListener('click', ()=>{ addLantaiRow(); calcLantai(); });
+document.getElementById('lantaiAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(LANTAI_KEYS, 'lantai-jenis', 'dus');
+  if(key){ addLantaiRow(key); calcLantai(); }
+});
+addLantaiRow('lantai_vinyl', '', 2.2, 8);
+calcLantai();
+
+// ---------- BAHAN: Cat Dekoratif (multi-baris, tiap jenis punya daya sebar & lapis sendiri) ----------
+function catRowHtml(jenis, luas, daya, lapis){
+  return `
+    <td><select class="cat-jenis">${CAT_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="cat-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="cat-daya" value="${daya!==undefined?daya:10}" min="0.1" step="0.1"></td>
+    <td><input type="number" class="cat-lapis" value="${lapis!==undefined?lapis:2}" min="1"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addCatRow(jenis, luas, daya, lapis){
+  const tr = document.createElement('tr');
+  tr.innerHTML = catRowHtml(jenis || CAT_KEYS[0], luas, daya, lapis);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcCat));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcCat(); });
+  document.getElementById('catBody').appendChild(tr);
+}
+function calcCat(){
+  const sums = {};
+  let totalLiter = 0;
+  CAT_KEYS.forEach(k=>{ materialQty[k]=0; });
+  document.querySelectorAll('#catBody tr').forEach(tr=>{
+    const jenis = tr.querySelector('.cat-jenis').value;
+    const luas = parseFloat(tr.querySelector('.cat-luas').value)||0;
+    const daya = parseFloat(tr.querySelector('.cat-daya').value)||10;
+    const lapis = parseFloat(tr.querySelector('.cat-lapis').value)||1;
+    const liter = Math.ceil((luas/daya)*lapis);
+    sums[jenis] = (sums[jenis]||0) + liter;
+    totalLiter += liter;
+  });
+  Object.entries(sums).forEach(([k,v])=>{ materialQty[k] = v; });
+  const resultEl = document.getElementById('catResult');
+  if(totalLiter===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} liter</b>`).join('<br>');
+    resultEl.innerHTML = `${rincian}<br>Total kebutuhan: <span class="big">${totalLiter} liter</span>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+document.getElementById('catAddRow').addEventListener('click', ()=>{ addCatRow(); calcCat(); });
+document.getElementById('catAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(CAT_KEYS, 'cat-jenis', 'liter');
+  if(key){ addCatRow(key); calcCat(); }
+});
+addCatRow('cat_tembok', '', 10, 2);
+calcCat();
+
+// ---------- BAHAN: Engsel (multi-jenis, per pcs) ----------
+function simpleCountRowHtml(cls, keysArray, jenis, jumlah){
+  return `
+    <td><select class="${cls}-jenis">${keysArray.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="${cls}-jumlah" value="${jumlah!==undefined?jumlah:''}" placeholder="0" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function calcSimpleCountGroup(tbodySelector, cls, keysArray, resultElId, satuanLabel){
+  const sums = {};
+  let total = 0;
+  keysArray.forEach(k=>{ materialQty[k]=0; });
+  document.querySelectorAll(tbodySelector+' tr').forEach(tr=>{
+    const jenis = tr.querySelector('.'+cls+'-jenis').value;
+    const jumlah = parseFloat(tr.querySelector('.'+cls+'-jumlah').value)||0;
+    sums[jenis] = (sums[jenis]||0) + jumlah;
+    total += jumlah;
+  });
+  Object.entries(sums).forEach(([k,v])=>{ materialQty[k] = v; });
+  const resultEl = document.getElementById(resultElId);
+  if(resultEl){
+    if(total===0){
+      resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+    }else{
+      const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} ${satuanLabel}</b>`).join('<br>');
+      resultEl.innerHTML = `${rincian}<br>Total: <span class="big">${total} ${satuanLabel}</span>`;
+    }
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+function addEngselRow(jenis, jumlah){
+  const tr = document.createElement('tr');
+  tr.innerHTML = simpleCountRowHtml('engsel', ENGSEL_KEYS, jenis || ENGSEL_KEYS[0], jumlah);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcAksesoris));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcAksesoris(); });
+  document.getElementById('engselBody').appendChild(tr);
+}
+document.getElementById('engselAddRow').addEventListener('click', ()=>{ addEngselRow(); calcAksesoris(); });
+document.getElementById('engselAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(ENGSEL_KEYS, 'engsel-jenis', 'pcs');
+  if(key){ addEngselRow(key); calcAksesoris(); }
+});
+
+// ---------- BAHAN: Rel Laci (multi-jenis + ukuran, per pasang) ----------
+function relLaciRowHtml(jenis, ukuran, jumlah){
+  return `
+    <td><select class="rellaci-jenis">${RELLACI_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="text" class="rellaci-ukuran" value="${ukuran||''}" placeholder="mis. 40cm" style="width:90px;"></td>
+    <td><input type="number" class="rellaci-jumlah" value="${jumlah!==undefined?jumlah:''}" placeholder="0" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addRelLaciRow(jenis, ukuran, jumlah){
+  const tr = document.createElement('tr');
+  tr.innerHTML = relLaciRowHtml(jenis || RELLACI_KEYS[0], ukuran, jumlah);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcAksesoris));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcAksesoris(); });
+  document.getElementById('relLaciBody').appendChild(tr);
+}
+document.getElementById('relLaciAddRow').addEventListener('click', ()=>{ addRelLaciRow(); calcAksesoris(); });
+document.getElementById('relLaciAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(RELLACI_KEYS, 'rellaci-jenis', 'pasang');
+  if(key){ addRelLaciRow(key); calcAksesoris(); }
+});
+
+// ---------- BAHAN: Handle (multi-jenis + ukuran, per pcs) ----------
+function handleRowHtml(jenis, ukuran, jumlah){
+  return `
+    <td><select class="handle-jenis">${HANDLE_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="text" class="handle-ukuran" value="${ukuran||''}" placeholder="mis. 12cm" style="width:90px;"></td>
+    <td><input type="number" class="handle-jumlah" value="${jumlah!==undefined?jumlah:''}" placeholder="0" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addHandleRow(jenis, ukuran, jumlah){
+  const tr = document.createElement('tr');
+  tr.innerHTML = handleRowHtml(jenis || HANDLE_KEYS[0], ukuran, jumlah);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcAksesoris));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcAksesoris(); });
+  document.getElementById('handleBody').appendChild(tr);
+}
+document.getElementById('handleAddRow').addEventListener('click', ()=>{ addHandleRow(); calcAksesoris(); });
+document.getElementById('handleAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(HANDLE_KEYS, 'handle-jenis', 'pcs');
+  if(key){ addHandleRow(key); calcAksesoris(); }
+});
+
+function calcAksesoris(){
+  calcSimpleCountGroup('#engselBody', 'engsel', ENGSEL_KEYS, null, 'pcs');
+  const relSums = {}; let relTotal = 0;
+  RELLACI_KEYS.forEach(k=>{ materialQty[k]=0; });
+  document.querySelectorAll('#relLaciBody tr').forEach(tr=>{
+    const jenis = tr.querySelector('.rellaci-jenis').value;
+    const jumlah = parseFloat(tr.querySelector('.rellaci-jumlah').value)||0;
+    relSums[jenis] = (relSums[jenis]||0) + jumlah;
+    relTotal += jumlah;
+  });
+  Object.entries(relSums).forEach(([k,v])=>{ materialQty[k] = v; });
+  const hSums = {}; let hTotal = 0;
+  HANDLE_KEYS.forEach(k=>{ materialQty[k]=0; });
+  document.querySelectorAll('#handleBody tr').forEach(tr=>{
+    const jenis = tr.querySelector('.handle-jenis').value;
+    const jumlah = parseFloat(tr.querySelector('.handle-jumlah').value)||0;
+    hSums[jenis] = (hSums[jenis]||0) + jumlah;
+    hTotal += jumlah;
+  });
+  Object.entries(hSums).forEach(([k,v])=>{ materialQty[k] = v; });
+
+  let engselTotal = 0;
+  ENGSEL_KEYS.forEach(k=>{ engselTotal += materialQty[k]||0; });
+
+  const resultEl = document.getElementById('akResult');
+  if(engselTotal===0 && relTotal===0 && hTotal===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    resultEl.innerHTML =
+      `Total Engsel: <span class="big">${engselTotal} pcs</span><br>
+       Total Rel Laci: <b>${relTotal} pasang</b><br>
+       Total Handle/Pegangan: <b>${hTotal} pcs</b>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+addEngselRow('engsel', '');
+addRelLaciRow('rellaci', '', '');
+addHandleRow('handle', '', '');
+calcAksesoris();
+
+// ---------- BAHAN: Titik Lampu (multi-jenis) ----------
+function lampuRowHtml(jenis, jumlah){
+  return `
+    <td><select class="lampu-jenis">${LAMPU_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="lampu-jumlah" value="${jumlah!==undefined?jumlah:''}" placeholder="0" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addLampuRow(jenis, jumlah){
+  const tr = document.createElement('tr');
+  tr.innerHTML = lampuRowHtml(jenis || LAMPU_KEYS[0], jumlah);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcLampu));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcLampu(); });
+  document.getElementById('lampuBody').appendChild(tr);
+}
+function calcLampu(){
+  calcSimpleCountGroup('#lampuBody', 'lampu', LAMPU_KEYS, 'lpResult', 'titik');
+}
+document.getElementById('lampuAddRow').addEventListener('click', ()=>{ addLampuRow(); calcLampu(); });
+document.getElementById('lampuAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(LAMPU_KEYS, 'lampu-jenis', 'titik');
+  if(key){ addLampuRow(key); calcLampu(); }
+});
+addLampuRow('lampu', '');
+calcLampu();
+
+// ---------- BAHAN: Rangka Plafon/Partisi (multi-jenis: Hollow, Kayu, Aluminium, dst) ----------
+function rangkaRowHtml(jenis, luas, jarak, panjangBatang, waste){
+  return `
+    <td><select class="rangka-jenis">${RANGKA_KEYS.map(k=>`<option value="${k}" ${k===jenis?'selected':''}>${materialPrices[k].label}</option>`).join('')}</select></td>
+    <td><input type="number" class="rangka-luas" value="${luas!==undefined?luas:''}" placeholder="0" min="0" step="0.01"></td>
+    <td><input type="number" class="rangka-jarak" value="${jarak!==undefined?jarak:60}" min="1"></td>
+    <td><input type="number" class="rangka-panjang" value="${panjangBatang!==undefined?panjangBatang:4}" min="0.1" step="0.1"></td>
+    <td><input type="number" class="rangka-waste" value="${waste!==undefined?waste:10}" min="0"></td>
+    <td><button class="rm-btn">✕</button></td>
+  `;
+}
+function addRangkaRow(jenis, luas, jarak, panjangBatang, waste){
+  const tr = document.createElement('tr');
+  tr.innerHTML = rangkaRowHtml(jenis || RANGKA_KEYS[0], luas, jarak, panjangBatang, waste);
+  tr.querySelectorAll('input, select').forEach(el=>el.addEventListener('input', calcHollow));
+  tr.querySelector('.rm-btn').addEventListener('click', ()=>{ tr.remove(); calcHollow(); });
+  document.getElementById('rangkaBody').appendChild(tr);
+}
+function calcHollow(){
+  const sums = {};
+  let totalBatang = 0;
+  RANGKA_KEYS.forEach(k=>{ materialQty[k]=0; });
+  document.querySelectorAll('#rangkaBody tr').forEach(tr=>{
+    const jenis = tr.querySelector('.rangka-jenis').value;
+    const luas = parseFloat(tr.querySelector('.rangka-luas').value)||0;
+    const jarak = parseFloat(tr.querySelector('.rangka-jarak').value)||60;
+    const panjangBatang = parseFloat(tr.querySelector('.rangka-panjang').value)||4;
+    const waste = parseFloat(tr.querySelector('.rangka-waste').value)||0;
+    const faktor = 3.6*(60/jarak); // meter lari per m2, rule of thumb kontraktor
+    const totalLM = luas*faktor*(1+waste/100);
+    const batang = Math.ceil(totalLM/panjangBatang);
+    sums[jenis] = (sums[jenis]||0) + batang;
+    totalBatang += batang;
+  });
+  Object.entries(sums).forEach(([k,v])=>{ materialQty[k] = v; });
+  const resultEl = document.getElementById('bhResult');
+  if(totalBatang===0){
+    resultEl.innerHTML = 'Isi form untuk melihat hasil.';
+  }else{
+    const rincian = Object.entries(sums).map(([k,v])=>`${materialPrices[k].label}: <b>${v} batang</b>`).join('<br>');
+    resultEl.innerHTML = `${rincian}<br>Total kebutuhan: <span class="big">${totalBatang} batang</span>`;
+  }
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+document.getElementById('rangkaAddRow').addEventListener('click', ()=>{ addRangkaRow(); calcHollow(); });
+document.getElementById('rangkaAddJenis').addEventListener('click', ()=>{
+  const key = addJenisBaru(RANGKA_KEYS, 'rangka-jenis', 'batang');
+  if(key){ addRangkaRow(key); calcHollow(); }
+});
+addRangkaRow('hollow', '', 60, 4, 10);
+calcHollow();
+
+// ---------- BAHAN: Granit/Top Table ----------
+function calcGranit(){
+  const p = parseFloat(document.getElementById('grP').value)||0;
+  const l = parseFloat(document.getElementById('grL').value)||0;
+  const waste = parseFloat(document.getElementById('grWaste').value)||0;
+  const luas = p*l;
+  const luasWaste = luas*(1+waste/100);
+  document.getElementById('grResult').innerHTML =
+    `Luas top table: <b>${luas.toFixed(2)} m²</b><br>
+     Luas + waste ${waste}%: <span class="big">${luasWaste.toFixed(2)} m²</span> granit/HPL top table`;
+  materialQty.granit = parseFloat(luasWaste.toFixed(2));
+  if(typeof calcEstimasi==='function') calcEstimasi();
+}
+['grP','grL','grWaste'].forEach(id=>document.getElementById(id).addEventListener('input', calcGranit));
+calcGranit();
+
+// ---------- JASA: KATEGORI & HARGA PER METER (bisa diedit/ditambah user) ----------
+// Data awal harga sengaja 0 — user mengisi sendiri sesuai tarif tukang/wilayahnya.
+let JASA_KATEGORI = [
+  {id:'kitchenset', nama:'Jasa Pembuatan Kitchen Set/Lemari Custom', satuan:'m1', harga:0},
+  {id:'plafon',     nama:'Jasa Pasang Plafon',                       satuan:'m2', harga:0},
+  {id:'wallpaper',  nama:'Jasa Pasang Wallpaper',                    satuan:'m2', harga:0},
+  {id:'vinyl',      nama:'Jasa Pasang Vinyl/Parket',                 satuan:'m2', harga:0},
+  {id:'cat',        nama:'Jasa Pengecatan',                          satuan:'m2', harga:0},
+];
+function slugJasaId(text){
+  return 'j_' + text.toLowerCase().replace(/[^a-z0-9]+/g,'_').replace(/^_+|_+$/g,'').slice(0,24) + '_' + Math.random().toString(36).slice(2,6);
+}
+function renderJasaKategori(){
+  const body = document.getElementById('jasaKategoriBody');
+  if(!body) return;
+  body.innerHTML = JASA_KATEGORI.map((k,i)=>`
+    <tr>
+      <td><input type="text" class="jk-nama" data-i="${i}" value="${k.nama.replace(/"/g,'&quot;')}" placeholder="Nama kategori pekerjaan"></td>
+      <td><input type="text" class="jk-satuan" data-i="${i}" value="${k.satuan.replace(/"/g,'&quot;')}" placeholder="m2" style="width:60px;"></td>
+      <td><input type="number" class="jk-harga" data-i="${i}" value="${k.harga}" placeholder="0"></td>
+      <td><button class="rm-btn jk-hapus" data-i="${i}">✕</button></td>
+    </tr>
+  `).join('');
+  body.querySelectorAll('.jk-nama').forEach(el=>el.addEventListener('input', e=>{
+    JASA_KATEGORI[+e.target.dataset.i].nama = e.target.value;
+    refreshJsJenisSelect();
+  }));
+  body.querySelectorAll('.jk-satuan').forEach(el=>el.addEventListener('input', e=>{
+    JASA_KATEGORI[+e.target.dataset.i].satuan = e.target.value;
+  }));
+  body.querySelectorAll('.jk-harga').forEach(el=>el.addEventListener('input', e=>{
+    JASA_KATEGORI[+e.target.dataset.i].harga = parseFloat(e.target.value)||0;
+    if(document.getElementById('jsJenis').value === JASA_KATEGORI[+e.target.dataset.i].id) calcJasa();
+  }));
+  body.querySelectorAll('.jk-hapus').forEach(el=>el.addEventListener('click', e=>{
+    JASA_KATEGORI.splice(+e.target.dataset.i, 1);
+    renderJasaKategori();
+    refreshJsJenisSelect();
+  }));
+}
+function refreshJsJenisSelect(){
+  const sel = document.getElementById('jsJenis');
+  const current = sel.value;
+  sel.innerHTML = JASA_KATEGORI.map(k=>`<option value="${k.id}">${k.nama || '(belum diberi nama)'}</option>`).join('');
+  if(JASA_KATEGORI.some(k=>k.id===current)) sel.value = current;
+  onJenisJasaChange();
+}
+document.getElementById('jasaAddKategori').addEventListener('click', ()=>{
+  JASA_KATEGORI.push({id:slugJasaId('kategori'), nama:'', satuan:'m2', harga:0});
+  renderJasaKategori();
+  refreshJsJenisSelect();
+});
+const saveJasaKategoriBtn = document.getElementById('saveJasaKategori');
+if(saveJasaKategoriBtn) saveJasaKategoriBtn.addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('jasaKategoriStatus');
+  try{
+    await cloudSaveField('jasaKategori', JASA_KATEGORI);
+    statusEl.textContent = 'Kategori & harga jasa berhasil disimpan permanen ke akun Anda.';
+    statusEl.style.color = 'var(--ok)';
+    logEvent('jasa_kategori_saved');
+  }catch(e){
+    statusEl.textContent = 'Gagal menyimpan. Pastikan Anda sedang login lalu coba lagi.';
+    statusEl.style.color = 'var(--rust)';
+  }
+});
+async function loadJasaKategori(){
+  try{
+    const saved = await cloudLoadField('jasaKategori');
+    if(Array.isArray(saved) && saved.length) JASA_KATEGORI = saved;
+  }catch(e){ /* belum ada data tersimpan, pakai kategori bawaan */ }
+  renderJasaKategori();
+  refreshJsJenisSelect();
+}
+
+// ---------- JASA: KALKULATOR UPAH (pakai kategori di atas) ----------
+function onJenisJasaChange(){
+  const preset = JASA_KATEGORI.find(k=>k.id===document.getElementById('jsJenis').value);
+  document.getElementById('jsUpah').value = preset ? preset.harga : 0;
+  const volInput = document.getElementById('jsVolume');
+  if(!volInput.value){
+    const totalProyek = document.getElementById('piVolume').value;
+    if(totalProyek) volInput.value = totalProyek;
+  }
+  calcJasa();
+}
+function calcJasa(){
+  const jenis = document.getElementById('jsJenis').value;
+  const preset = JASA_KATEGORI.find(k=>k.id===jenis);
+  const resultEl = document.getElementById('jsResult');
+  if(!preset){
+    resultEl.innerHTML = 'Belum ada kategori jasa. Tambahkan dulu di kartu "Kategori &amp; Harga Jasa per Meter" di atas.';
+    return;
+  }
+  const volume = parseFloat(document.getElementById('jsVolume').value)||0;
+  const upah = parseFloat(document.getElementById('jsUpah').value)||0;
+  const tingkat = parseFloat(document.getElementById('jsTingkat').value)||1;
+  const total = volume*upah*tingkat;
+  resultEl.innerHTML =
+    `${preset.nama || '(belum diberi nama)'}: <b>${volume} ${preset.satuan}</b> &times; ${rupiah(upah)} &times; ${tingkat}<br>
+     Total Jasa: <span class="big">${rupiah(total)}</span>`;
+}
+document.getElementById('jsJenis').addEventListener('change', onJenisJasaChange);
+document.getElementById('jsVolume').addEventListener('input', calcJasa);
+document.getElementById('jsUpah').addEventListener('input', calcJasa);
+document.getElementById('jsTingkat').addEventListener('change', calcJasa);
+document.getElementById('jsAddToRab').addEventListener('click', ()=>{
+  const jenis = document.getElementById('jsJenis').value;
+  const preset = JASA_KATEGORI.find(k=>k.id===jenis);
+  if(!preset) return;
+  const volume = parseFloat(document.getElementById('jsVolume').value)||0;
+  const upah = parseFloat(document.getElementById('jsUpah').value)||0;
+  const tingkat = parseFloat(document.getElementById('jsTingkat').value)||1;
+  addRabRow({uraian: preset.nama, vol: volume, satuan: preset.satuan, harga: Math.round(upah*tingkat), tahap:'auto'});
+  logEvent('jasa_added_to_rab', {jenis});
+  goToTab('rab');
+  const statusEl = document.getElementById('jsStatus');
+  statusEl.textContent = 'Ditambahkan ke RAB.';
+  setTimeout(()=>statusEl.textContent='', 2500);
+});
+renderJasaKategori();
+refreshJsJenisSelect();
+
+// ---------- HARGA MATERIAL: render, simpan, muat ----------
+function renderHargaTable(){
+  const body = document.getElementById('hargaBody');
+  if(!body) return;
+  body.innerHTML = '';
+  Object.entries(materialPrices).forEach(([key, m])=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${m.label}</td>
+      <td>${m.unit}</td>
+      <td><input type="number" data-key="${key}" class="harga-input" value="${m.price}"></td>
+    `;
+    body.appendChild(tr);
+  });
+  body.querySelectorAll('.harga-input').forEach(inp=>{
+    inp.addEventListener('input', e=>{
+      materialPrices[e.target.dataset.key].price = parseFloat(e.target.value)||0;
+      calcEstimasi();
+    });
+  });
+}
+
+function calcEstimasi(){
+  const body = document.getElementById('estimasiBody');
+  if(!body) return;
+  let grand = 0;
+  body.innerHTML = '';
+  Object.entries(materialQty).forEach(([key, qty])=>{
+    const m = materialPrices[key];
+    if(!m || qty<=0) return;
+    const subtotal = qty*m.price;
+    grand += subtotal;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${m.label}</td><td>${qty} ${m.unit}</td><td>${rupiah(m.price)}</td><td style="font-weight:700;">${rupiah(subtotal)}</td>`;
+    body.appendChild(tr);
+  });
+  if(grand===0){
+    body.innerHTML = '<tr><td colspan="4" style="color:#8a8370;">Isi kalkulator di tab Bahan untuk melihat estimasi.</td></tr>';
+  }
+  const totalEl = document.getElementById('estimasiTotal');
+  if(totalEl) totalEl.textContent = rupiah(grand);
+}
+const exportEstimasiBtn = document.getElementById('exportEstimasi');
+if(exportEstimasiBtn) exportEstimasiBtn.addEventListener('click', ()=>{
+  let out = 'ESTIMASI KEBUTUHAN MATERIAL\n============================\n';
+  Object.entries(materialQty).forEach(([key, qty])=>{
+    const m = materialPrices[key];
+    if(!m || qty<=0) return;
+    out += `${m.label}: ${qty} ${m.unit} x ${rupiah(m.price)} = ${rupiah(qty*m.price)}\n`;
+  });
+  out += '----------------------------\n';
+  out += 'TOTAL ESTIMASI: '+document.getElementById('estimasiTotal').textContent+'\n';
+  const blob = new Blob([out], {type:'text/plain'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Estimasi-Bahan.txt';
+  a.click();
+  logEvent('export_estimasi');
+});
+
+async function loadHarga(){
+  try{
+    const saved = await cloudLoadField('materialPrices');
+    if(saved){
+      Object.keys(materialPrices).forEach(k=>{ if(typeof saved[k]==='number') materialPrices[k].price = saved[k]; });
+    }
+  }catch(e){ /* belum ada data tersimpan */ }
+  renderHargaTable();
+  calcEstimasi();
+}
+document.getElementById('saveHarga').addEventListener('click', async ()=>{
+  const statusEl = document.getElementById('hargaStatus');
+  try{
+    const toSave = {};
+    Object.entries(materialPrices).forEach(([k,m])=>{ toSave[k]=m.price; });
+    await cloudSaveField('materialPrices', toSave);
+    statusEl.textContent = 'Harga berhasil disimpan permanen ke akun Anda.';
+    statusEl.style.color = 'var(--ok)';
+    logEvent('harga_saved');
+  }catch(e){
+    statusEl.textContent = 'Gagal menyimpan harga. Pastikan Anda sedang login lalu coba lagi.';
+    statusEl.style.color = 'var(--rust)';
+  }
+});
+document.getElementById('resetHarga').addEventListener('click', ()=>{
+  materialPrices = JSON.parse(JSON.stringify(DEFAULT_PRICES));
+  renderHargaTable();
+  calcEstimasi();
+  const statusEl = document.getElementById('hargaStatus');
+  statusEl.textContent = 'Direset ke harga default.';
+  statusEl.style.color = 'var(--steel)';
+});
+
+// dipanggil dari authEnterApp() setelah login, bukan di sini
+
+// ---------- SKETSA (canvas) ----------
+const canvas = document.getElementById('board');
+const ctx = canvas.getContext('2d');
+function fitCanvas(){
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = 360;
+  redraw();
+}
+window.addEventListener('resize', fitCanvas);
+
+let objects = []; // {type:'wall'|'rect'|'text', points/x/y/w/h/text}
+let tool = 'wall';
+let drawing = false;
+let startPt = null;
+
+document.querySelectorAll('.tool-row [data-tool]').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.tool-row [data-tool]').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    tool = btn.dataset.tool;
+  });
+});
+document.getElementById('clearCanvas').addEventListener('click', ()=>{ objects=[]; redraw(); });
+
+const FURNITURE_PRESETS = {
+  sofa:{w:180,h:80,label:'Sofa',color:'92,122,153'},
+  mejamakan:{w:140,h:90,label:'Meja Makan',color:'201,98,45'},
+  kasur:{w:160,h:200,label:'Tempat Tidur',color:'92,122,153'},
+  counter:{w:240,h:60,label:'Kitchen Counter',color:'201,98,45'},
+  lemari:{w:100,h:60,label:'Lemari',color:'92,122,153'},
+  mejakerja:{w:120,h:60,label:'Meja Kerja',color:'201,98,45'},
+  pintu:{w:90,h:12,label:'Pintu',color:'27,42,74'},
+  jendela:{w:120,h:12,label:'Jendela',color:'92,122,153'},
+};
+
+function getPos(e){
+  const rect = canvas.getBoundingClientRect();
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+  return { x: clientX-rect.left, y: clientY-rect.top };
+}
+
+function onDown(e){
+  e.preventDefault();
+  const pos = getPos(e);
+  if(tool==='erase'){
+    objects = objects.filter(o=>{
+      if(o.type==='rect') return !(pos.x>=o.x && pos.x<=o.x+o.w && pos.y>=o.y && pos.y<=o.y+o.h);
+      if(o.type==='wall') return !(Math.hypot(pos.x-o.x1,pos.y-o.y1) < 12 || Math.hypot(pos.x-o.x2,pos.y-o.y2) < 12);
+      if(o.type==='text') return !(Math.hypot(pos.x-o.x,pos.y-o.y) < 20);
+      return true;
+    });
+    redraw();
+    return;
+  }
+  if(tool==='text'){
+    const label = prompt('Label furnitur/ruangan:', 'Sofa');
+    if(label) objects.push({type:'text', x:pos.x, y:pos.y, text:label});
+    redraw();
+    return;
+  }
+  if(tool==='furniture'){
+    const sel = document.getElementById('furnitureSelect');
+    const preset = FURNITURE_PRESETS[sel.value];
+    if(!preset) return;
+    objects.push({type:'rect', x:pos.x-preset.w/2, y:pos.y-preset.h/2, w:preset.w, h:preset.h, label:preset.label, color:preset.color});
+    redraw();
+    logEvent('sketsa_furniture_placed', {preset: sel.value});
+    return;
+  }
+  drawing = true;
+  startPt = pos;
+}
+function onMove(e){
+  if(!drawing) return;
+  e.preventDefault();
+  const pos = getPos(e);
+  redraw();
+  ctx.strokeStyle = '#C9622D';
+  ctx.lineWidth = 2;
+  ctx.setLineDash([4,3]);
+  if(tool==='wall'){
+    ctx.beginPath(); ctx.moveTo(startPt.x,startPt.y); ctx.lineTo(pos.x,pos.y); ctx.stroke();
+  } else if(tool==='rect'){
+    ctx.strokeRect(Math.min(startPt.x,pos.x), Math.min(startPt.y,pos.y), Math.abs(pos.x-startPt.x), Math.abs(pos.y-startPt.y));
+  }
+  ctx.setLineDash([]);
+}
+function onUp(e){
+  if(!drawing) return;
+  drawing = false;
+  const pos = getPos(e.changedTouches ? {touches:e.changedTouches} : e);
+  if(tool==='wall'){
+    objects.push({type:'wall', x1:startPt.x, y1:startPt.y, x2:pos.x, y2:pos.y});
+  } else if(tool==='rect'){
+    objects.push({type:'rect', x:Math.min(startPt.x,pos.x), y:Math.min(startPt.y,pos.y), w:Math.abs(pos.x-startPt.x), h:Math.abs(pos.y-startPt.y)});
+  }
+  redraw();
+}
+canvas.addEventListener('mousedown', onDown);
+canvas.addEventListener('mousemove', onMove);
+window.addEventListener('mouseup', onUp);
+canvas.addEventListener('touchstart', onDown, {passive:false});
+canvas.addEventListener('touchmove', onMove, {passive:false});
+canvas.addEventListener('touchend', onUp);
+
+function redraw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  objects.forEach(o=>{
+    if(o.type==='wall'){
+      ctx.strokeStyle = '#1B2A4A'; ctx.lineWidth = 4; ctx.lineCap='round';
+      ctx.beginPath(); ctx.moveTo(o.x1,o.y1); ctx.lineTo(o.x2,o.y2); ctx.stroke();
+    } else if(o.type==='rect'){
+      const col = o.color || '92,122,153';
+      ctx.strokeStyle = `rgba(${col},1)`; ctx.lineWidth = 2;
+      ctx.fillStyle = `rgba(${col},0.15)`;
+      ctx.fillRect(o.x,o.y,o.w,o.h);
+      ctx.strokeRect(o.x,o.y,o.w,o.h);
+      if(o.label){
+        ctx.fillStyle = '#1A1A1A';
+        ctx.font = '11px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(o.label, o.x+o.w/2, o.y+o.h/2+4);
+        ctx.textAlign = 'left';
+      }
+    } else if(o.type==='text'){
+      ctx.fillStyle = '#1A1A1A';
+      ctx.font = '12px Inter, sans-serif';
+      ctx.fillText(o.text, o.x, o.y);
+    }
+  });
+}
+const exportPngBtn = document.getElementById('exportPng');
+if(exportPngBtn) exportPngBtn.addEventListener('click', ()=>{
+  const a = document.createElement('a');
+  a.href = canvas.toDataURL('image/png');
+  a.download = 'sketsa-denah.png';
+  a.click();
+});
+setTimeout(fitCanvas, 50);
+
+// ---------- PAKET LISENSI PRO ----------
+const WA_NUMBERS = ['6285263677768'];
+const LICENSE_PACKAGES = [
+  {key:'mingguan', name:'Mingguan', price:50000, sub:'7 hari akses penuh'},
+  {key:'bulanan', name:'Bulanan', price:150000, sub:'30 hari akses penuh', best:true},
+  {key:'3bulan', name:'3 Bulan', price:400000, sub:'Hemat dibanding bulanan'},
+  {key:'6bulan', name:'6 Bulan', price:700000, sub:'Hemat lebih banyak'},
+  {key:'1tahun', name:'1 Tahun', price:1200000, sub:'Paling hemat, akses 12 bulan'},
+];
+function renderLicensePackages(){
+  const el = document.getElementById('licensePackages');
+  if(!el) return;
+  el.innerHTML = LICENSE_PACKAGES.map(pkg=>{
+    const text = encodeURIComponent(`Halo, saya ingin membeli lisensi RAB Interior PRO paket *${pkg.name}* (${rupiah(pkg.price)}). Mohon info cara pembayarannya.`);
+    const waUrl = `https://wa.me/${WA_NUMBERS[0]}?text=${text}`;
+    return `
+      <div class="pkg-card ${pkg.best?'best':''}">
+        <div>
+          <div class="pkg-name">${pkg.name} ${pkg.best?'<span class="pkg-badge">Populer</span>':''}</div>
+          <div class="pkg-price">${rupiah(pkg.price)}</div>
+          <div class="pkg-sub">${pkg.sub}</div>
+        </div>
+        <a href="${waUrl}" target="_blank" class="pkg-btn" onclick="logEvent('license_package_clicked', {package:'${pkg.key}', price:${pkg.price}})">Pesan via WA</a>
+      </div>
+    `;
+  }).join('');
+}
+renderLicensePackages();
+authInit();
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((err) => {
+      console.warn('Service worker registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>
